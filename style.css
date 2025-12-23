@@ -207,7 +207,11 @@ p {
 }
 
 .burger span {
-filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+  width: 26px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: var(--transition-base);
 }
 
 .burger.active span:nth-child(1) {
@@ -596,12 +600,20 @@ filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 8px rgba(255, 
 }
 
 .step-number {
-  color: var(--accent);  /* Cyan solide au lieu de dégradé transparent */
-  opacity: 0.25;
-  text-shadow: 
-    0 0 20px rgba(0, 212, 255, 0.6),    /* Halo cyan moyen */
-    0 0 40px rgba(0, 212, 255, 0.4),    /* Halo cyan large */
-    2px 2px 4px rgba(0, 0, 0, 0.3);     /* Ombre portée pour contraste */
+  position: absolute;
+  top: 1.25rem;
+  left: 2.25rem;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.35;
+  line-height: 1;
+  font-family: "Inter", monospace;
+  z-index: 1;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
 }
 
 /* Offer Cards */
@@ -1034,14 +1046,12 @@ footer strong {
   }
   
   .step-number {
-    font-size: 2.5rem !important;        /* Légèrement plus grand */
-  color: var(--accent) !important;     /* Cyan solide */
-  opacity: 0.35 !important;            /* Un peu plus visible */
-  text-shadow: 
-    0 0 25px rgba(0, 212, 255, 0.8),   /* Halo cyan intense */
-    0 0 50px rgba(0, 212, 255, 0.5),   /* Halo cyan très large */
-    2px 2px 6px rgba(0, 0, 0, 0.5) !important; /* Ombre noire forte */
-}
+    font-size: 2rem;
+    left: 1.75rem;
+    top: 0.75rem;
+    opacity: 0.5;
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.4));
+  }
 
    .card-step h3 {
     margin-top: 0.5rem;
