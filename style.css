@@ -204,28 +204,31 @@ p {
   cursor: pointer;
   padding: 0.5rem;
   z-index: 1001;
+  background: transparent;
+  border: none;
 }
 
 .burger span {
-  width: 26px;
+  width: 28px;
   height: 3px;
   background: var(--primary);
-  border-radius: 3px;
-  transition: var(--transition-base);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: block;
 }
 
 .burger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(9px, 9px);
+  transform: rotate(45deg) translate(8px, 8px);
   background: var(--accent);
 }
 
 .burger.active span:nth-child(2) {
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateX(-20px);
 }
 
 .burger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(9px, -9px);
+  transform: rotate(-45deg) translate(8px, -8px);
   background: var(--accent);
 }
 
@@ -1017,6 +1020,7 @@ footer strong {
   
   .logo img {
     height: 44px;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 15px rgba(255, 255, 255, 0.6)) !important;
   }
   
   .hero {
@@ -1044,15 +1048,16 @@ footer strong {
     padding: 3.5rem 1.75rem 1.75rem 1.75rem;
   }
   
-  .step-number {
-    font-size: 2.25rem;
+   .step-number {
+    font-size: 3rem;
     left: 1.75rem;
-    top: 1rem;
-    opacity: 0.4;
+    top: 1.25rem;
+    opacity: 0.35;
   }
 
-   .card-step h3 {
-    margin-top: 0.5rem;
+  .card-step h3 {
+    margin-top: 0 !important;
+    font-size: 1rem !important;
   }
   
   .offer-card {
