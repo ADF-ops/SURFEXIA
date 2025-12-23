@@ -87,8 +87,16 @@ h2::after {
   left: 0;
   width: 70px;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+  background: linear-gradient(90deg, #00d4ff 0%, #d4af37 100%);
   border-radius: 2px;
+  /* Fallback pour mobile */
+  background-color: #d4af37;
+}
+
+@supports (background: linear-gradient(90deg, #00d4ff 0%, #d4af37 100%)) {
+  h2::after {
+    background: linear-gradient(90deg, #00d4ff 0%, #d4af37 100%);
+  }
 }
 
 h3 {
@@ -608,7 +616,7 @@ p {
   left: 2.25rem;
   font-size: 3rem;
   font-weight: 900;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+  background: linear-gradient(135deg, #00d4ff 0%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -616,6 +624,8 @@ p {
   line-height: 1;
   font-family: "Inter", monospace;
   z-index: 1;
+  /* Fix pour mobile */
+  -webkit-text-stroke: 0.5px rgba(212, 175, 55, 0.3);
 }
 
 /* Offer Cards */
@@ -1005,9 +1015,24 @@ footer strong {
 }
 
 @media (max-width: 640px) {
-  html {
-    font-size: 15px;
+  /* ... vos règles existantes ... */
+  
+  /* Fix couleur or pour mobile */
+  .step-number {
+    background: linear-gradient(135deg, #00d4ff 0%, #d4af37 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Force le rendu du dégradé */
+    text-fill-color: transparent;
   }
+  
+  h2::after {
+    background: linear-gradient(90deg, #00d4ff 0%, #d4af37 100%) !important;
+  }
+  
+  /* ... reste des règles ... */
+}
   
   .nav-container {
     padding: 0.875rem 1.5rem;
