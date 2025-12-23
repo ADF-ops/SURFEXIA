@@ -612,7 +612,7 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0.25;
+  opacity: 0.5;
   line-height: 1;
   font-family: "Inter", monospace;
   z-index: 1;
@@ -1048,14 +1048,16 @@ footer strong {
   }
   
    .step-number {
-      position: absolute;
+  position: absolute;
   top: 1.25rem;
-  left: 1.75rem;
+  left: 2.25rem;
   font-size: 3rem;
   font-weight: 900;
   background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0.80;
+  opacity: 0.5;
   line-height: 1;
   font-family: "Inter", monospace;
   z-index: 1;
