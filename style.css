@@ -1054,8 +1054,6 @@ footer strong {
   font-size: 3rem;
   font-weight: 900;
   background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
   opacity: 0.80;
   line-height: 1;
