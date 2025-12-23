@@ -149,12 +149,12 @@ p {
   height: 52px;
   width: auto;
   transition: var(--transition-base);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
 }
 
 .logo img:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0 4px 8px rgba(0, 212, 255, 0.3));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 25px rgba(0, 212, 255, 0.6));
 }
 
 .nav-desktop {
@@ -568,7 +568,7 @@ p {
 /* Card Step (Méthodologie) - Numérotation technique */
 .card-step {
   position: relative;
-  padding: 4rem 2.25rem 2.25rem 2.25rem;
+  padding: 5rem 2.25rem 2.25rem 2.25rem;
   background: var(--white);
   min-height: auto;
   display: block;
@@ -609,10 +609,11 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0.2;
+  opacity: 0.35;
   line-height: 1;
   font-family: "Inter", monospace;
   z-index: 1;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
 }
 
 /* Offer Cards */
@@ -1044,8 +1045,14 @@ footer strong {
   }
   
   .step-number {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     left: 1.75rem;
+    top: 1rem;
+    opacity: 0.4;
+  }
+
+   .card-step h3 {
+    margin-top: 0.5rem;
   }
   
   .offer-card {
