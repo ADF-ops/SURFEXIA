@@ -600,20 +600,12 @@ p {
 }
 
 .step-number {
-  position: absolute;
-  top: 1.25rem;
-  left: 2.25rem;
-  font-size: 3rem;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: 0.35;
-  line-height: 1;
-  font-family: "Inter", monospace;
-  z-index: 1;
-  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  color: var(--accent);  /* Cyan solide au lieu de dégradé transparent */
+  opacity: 0.25;
+  text-shadow: 
+    0 0 20px rgba(0, 212, 255, 0.6),    /* Halo cyan moyen */
+    0 0 40px rgba(0, 212, 255, 0.4),    /* Halo cyan large */
+    2px 2px 4px rgba(0, 0, 0, 0.3);     /* Ombre portée pour contraste */
 }
 
 /* Offer Cards */
@@ -1054,8 +1046,7 @@ footer strong {
   }
 
    .card-step h3 {
-    margin-top: 0.75rem !important;
-  font-size: 1rem !important;
+    margin-top: 0.5rem;
   }
   
   .offer-card {
