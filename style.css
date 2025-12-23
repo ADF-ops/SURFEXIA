@@ -1015,24 +1015,9 @@ footer strong {
 }
 
 @media (max-width: 640px) {
-  /* ... vos règles existantes ... */
-  
-  /* Fix couleur or pour mobile */
-  .step-number {
-    background: linear-gradient(135deg, #00d4ff 0%, #d4af37 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* Force le rendu du dégradé */
-    text-fill-color: transparent;
+  html {
+    font-size: 15px;
   }
-  
-  h2::after {
-    background: linear-gradient(90deg, #00d4ff 0%, #d4af37 100%) !important;
-  }
-  
-  /* ... reste des règles ... */
-}
   
   .nav-container {
     padding: 0.875rem 1.5rem;
@@ -1072,20 +1057,22 @@ footer strong {
     padding: 5.5rem 1.75rem 1.75rem 1.75rem;
   }
   
-   .step-number {
-  position: absolute;
-  top: 1.25rem;
-  left: 2.25rem;
-  font-size: 3rem;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  opacity: 0.5;
-  line-height: 1;
-  font-family: "Inter", monospace;
-  z-index: 1;
+  /* FIX COULEUR OR POUR MOBILE - NumÃ©rotation */
+  .step-number {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.75rem;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00d4ff 0%, #d4af37 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: #d4af37;
+    opacity: 0.5;
+    line-height: 1;
+    font-family: "Inter", monospace;
+    z-index: 1;
   }
 
   .card-step h3 {
@@ -1107,5 +1094,19 @@ footer strong {
   
   footer {
     padding: 3rem 1.5rem;
+  }
+  
+  /* FIX COULEUR OR - Soulignement H2 */
+  h2::after {
+    background: linear-gradient(90deg, #00d4ff 0%, #d4af37 100%) !important;
+  }
+  
+  .dark h2::after {
+    background: linear-gradient(90deg, #00d4ff 0%, #ffffff 100%) !important;
+  }
+  
+  /* FIX COULEUR OR - Ligne sous titre hero */
+  .hero-text h1::after {
+    background: linear-gradient(90deg, transparent, #d4af37, transparent) !important;
   }
 }
