@@ -1017,6 +1017,7 @@ footer strong {
   
   .logo img {
     height: 44px;
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 25px rgba(255, 255, 255, 0.9)) !important;
   }
   
   .hero {
@@ -1041,18 +1042,20 @@ footer strong {
   }
   
   .card-step {
-    padding: 3.5rem 1.75rem 1.75rem 1.75rem;
+    padding: 4.5rem 1.75rem 1.75rem 1.75rem;
   }
   
   .step-number {
-    font-size: 2.25rem;
+    font-size: 2rem;
     left: 1.75rem;
-    top: 1rem;
-    opacity: 0.4;
+    top: 0.75rem;
+    opacity: 0.5;
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.4));
   }
 
    .card-step h3 {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem !important;
+  font-size: 1rem !important;
   }
   
   .offer-card {
