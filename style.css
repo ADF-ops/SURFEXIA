@@ -1,0 +1,1066 @@
+/* ===============================
+   SURFEXIA - IDENTITÉ UNIQUE
+   Ingénierie des surfaces & procédés critiques
+================================ */
+
+/* ===============================
+   VARIABLES - IDENTITÉ SURFEXIA
+================================ */
+:root {
+  /* Couleurs signature SURFEXIA */
+  --primary: #0b1c2d;        /* Bleu industriel profond */
+  --secondary: #1f3b5b;      /* Bleu acier technique */
+  --accent: #00d4ff;         /* Cyan vif (différent de Safran) */
+  --accent-dark: #00a8cc;    /* Cyan sombre */
+  --gold: #d4af37;           /* Or métallique (luxe/précision) */
+  --dark: #050a0f;           /* Noir absolu */
+  --light: #f5f8fa;          /* Gris laboratoire */
+  --gray-100: #e8eef3;
+  --gray-300: #b8c5d0;
+  --gray-600: #546e7a;
+  --gray-800: #263238;
+  --text: #1a2530;
+  --white: #ffffff;
+  
+  /* Spacing technique - RÉDUIT */
+  --section-padding: 50px;
+  --container-width: 1320px;
+  
+  /* Transitions précises */
+  --transition-base: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-slow: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* ===============================
+   RESET & BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===============================
+   TYPOGRAPHY - Style Technique RÉDUIT
+================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.875rem;
+}
+
+/* Ligne accent sous les H2 (signature SURFEXIA) */
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  margin-bottom: 0.875rem;
+  font-weight: 600;
+}
+
+p {
+  color: var(--gray-600);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  margin-bottom: 0.875rem;
+}
+
+.lead {
+  font-size: clamp(1.0625rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--gray-800);
+  font-weight: 400;
+  max-width: 950px;
+  margin: 0 auto 3rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 1.75rem;
+}
+
+/* ===============================
+   HEADER & NAVIGATION - Style Labo
+================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 2px solid rgba(0, 212, 255, 0.1);
+  transition: var(--transition-base);
+}
+
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 32px rgba(11, 28, 45, 0.08);
+  border-bottom-color: rgba(0, 212, 255, 0.2);
+}
+
+.nav-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 52px;
+  width: auto;
+  transition: var(--transition-base);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 212, 255, 0.3));
+}
+
+.nav-desktop {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-desktop a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.03em;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: var(--transition-base);
+}
+
+/* Soulignement en dégradé (signature SURFEXIA) */
+.nav-desktop a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+  transition: width 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-desktop a:hover::after,
+.nav-desktop a.active::after {
+  width: 100%;
+}
+
+.nav-desktop a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Burger Menu - Design technique */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.burger span {
+  width: 26px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: var(--transition-base);
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 9px);
+  background: var(--accent);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -9px);
+  background: var(--accent);
+}
+
+/* Mobile Navigation */
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: 86px;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 20px 60px rgba(11, 28, 45, 0.15);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-mobile.open {
+  display: block;
+  max-height: 600px;
+}
+
+.nav-mobile a {
+  display: block;
+  padding: 1.5rem 3rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-bottom: 1px solid var(--gray-100);
+  transition: var(--transition-base);
+  position: relative;
+}
+
+.nav-mobile a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+  transition: width 0.4s ease;
+}
+
+.nav-mobile a:hover {
+  background: var(--light);
+  color: var(--accent);
+  padding-left: 4rem;
+}
+
+.nav-mobile a:hover::before {
+  width: 6px;
+}
+
+/* ===============================
+   HERO SECTION - HAUTEUR UNIFIÉE
+================================ */
+.hero {
+  position: relative;
+  height: 55vh;
+  min-height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 86px;
+  padding: 0 2rem;
+}
+
+/* Overlay technique avec grille */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(135deg, rgba(11, 28, 45, 0.85) 0%, rgba(5, 10, 15, 0.75) 100%),
+    repeating-linear-gradient(0deg, rgba(0, 212, 255, 0.03) 0px, transparent 1px, transparent 40px, rgba(0, 212, 255, 0.03) 41px),
+    repeating-linear-gradient(90deg, rgba(0, 212, 255, 0.03) 0px, transparent 1px, transparent 40px, rgba(0, 212, 255, 0.03) 41px);
+  z-index: 1;
+}
+
+.hero img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.hero:hover img {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: var(--white);
+  max-width: 1000px;
+  padding: 2rem;
+  animation: fadeInUp 1.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  width: 100%;
+}
+
+.hero-text h1 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  display: inline-block;
+}
+
+/* Accent doré sous le titre hero (luxe/précision) */
+.hero-text h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.hero-text p {
+  font-size: clamp(1rem, 2vw, 1.375rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.hero-small {
+  height: 55vh;
+  min-height: 450px;
+}
+
+/* ===============================
+   SECTIONS - ESPACEMENTS RÉDUITS
+================================ */
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+/* Réduction de l'espacement après le hero */
+.hero + .section {
+  padding-top: calc(var(--section-padding) * 0.4);
+}
+
+/* Réduction de l'espacement entre lead et H2 */
+.lead + h2,
+.section .container .lead ~ h2 {
+  margin-top: 3rem;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* Section Dark - Atmosphère laboratoire */
+.dark {
+  background: 
+    linear-gradient(135deg, var(--dark) 0%, var(--primary) 50%, var(--secondary) 100%);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Grille technique en arrière-plan */
+.dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.4;
+}
+
+/* Points de connexion (style molécule) */
+.dark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0, 212, 255, 0.15) 2px, transparent 2px);
+  background-size: 100px 100px;
+  opacity: 0.3;
+}
+
+.dark .container {
+  position: relative;
+  z-index: 1;
+}
+
+.dark h2,
+.dark h3 {
+  color: var(--white);
+}
+
+.dark h2::after {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--white) 100%);
+}
+
+.dark p,
+.dark li {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ===============================
+   CARDS - Design Technique Premium
+================================ */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: 
+    0 4px 24px rgba(11, 28, 45, 0.08),
+    0 0 0 1px rgba(0, 212, 255, 0.05);
+  transition: var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image dans les cards - Plein écran par défaut */
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: var(--transition-slow);
+  opacity: 1 !important;
+  z-index: 1;
+}
+
+/* Container pour le texte */
+.card-content {
+  padding: 2.25rem;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Texte des cards - Caché par défaut */
+.card-content h3,
+.card-content p {
+  color: var(--white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.75rem;
+}
+
+.card-content h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.875rem;
+}
+
+.card-content p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Au survol : image s'estompe, texte apparaît */
+.card:hover img {
+  opacity: 0.12 !important;
+  transform: scale(1.05);
+}
+
+.card:hover .card-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 60px rgba(11, 28, 45, 0.15),
+    0 0 0 2px var(--accent);
+  border-color: var(--accent);
+}
+
+/* Barre latérale animée (signature SURFEXIA) */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--gold) 100%);
+  transition: height 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 3;
+}
+
+.card:hover::before {
+  height: 100%;
+}
+
+.dark .card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.dark .card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 2px var(--accent);
+}
+
+/* Card Step (Méthodologie) - Numérotation technique */
+.card-step {
+  position: relative;
+  padding: 4rem 2.25rem 2.25rem 2.25rem;
+  background: var(--white);
+  min-height: auto;
+  display: block;
+}
+
+.card-step img {
+  display: none;
+}
+
+.card-step h3,
+.card-step p {
+  opacity: 1;
+  transform: none;
+  color: var(--primary);
+  text-shadow: none;
+  position: relative;
+  z-index: 2;
+}
+
+.card-step h3 {
+  font-size: 1.0625rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-step p {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.step-number {
+  position: absolute;
+  top: 1.25rem;
+  left: 2.25rem;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.2;
+  line-height: 1;
+  font-family: "Inter", monospace;
+  z-index: 1;
+}
+
+/* Offer Cards */
+.offer-card {
+  padding: 2.25rem;
+  background: var(--white);
+  min-height: auto;
+  display: block;
+}
+
+.offer-card img {
+  display: none;
+}
+
+.offer-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  opacity: 1;
+  transform: none;
+  text-shadow: none;
+  position: relative;
+  z-index: 2;
+}
+
+.offer-card p {
+  margin-bottom: 1.25rem;
+  color: var(--gray-600);
+  opacity: 1;
+  transform: none;
+  text-shadow: none;
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 2;
+}
+
+.offer-card ul {
+  margin-top: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===============================
+   LISTES - Style Technique
+================================ */
+ul {
+  list-style: none;
+  margin-top: 1.25rem;
+}
+
+ul li {
+  padding-left: 2rem;
+  margin-bottom: 0.875rem;
+  position: relative;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Icône flèche technique */
+ul li::before {
+  content: "⟩";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.375rem;
+  line-height: 1;
+  top: 0.1rem;
+}
+
+.dark ul li {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.value-list li {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+/* ===============================
+   SECTEURS - Grid Dynamique + TEXTE VISIBLE
+================================ */
+.sectors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.sectors div {
+  background: var(--white);
+  padding: 1.75rem 1.5rem;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--primary);
+  box-shadow: 0 4px 20px rgba(11, 28, 45, 0.08);
+  transition: var(--transition-slow);
+  border: 2px solid rgba(0, 212, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85px;
+}
+
+.sectors div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.sectors div:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 50px rgba(0, 212, 255, 0.3);
+  border-color: var(--accent);
+}
+
+.sectors div:hover::before {
+  opacity: 0.95;
+}
+
+.sectors div span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+
+.sectors div:hover span {
+  color: var(--white);
+}
+
+.dark .sectors div {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dark .sectors div:hover {
+  border-color: var(--accent);
+}
+
+.dark .sectors div:hover span {
+  color: var(--white);
+}
+
+/* ===============================
+   IMAGES - Qualité Premium
+================================ */
+.section img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 
+    0 20px 60px rgba(11, 28, 45, 0.15),
+    0 0 0 1px rgba(0, 212, 255, 0.1);
+  transition: var(--transition-slow);
+  margin: 1.25rem auto;
+  opacity: 1 !important;
+}
+
+.section img:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 
+    0 30px 80px rgba(11, 28, 45, 0.2),
+    0 0 0 2px var(--accent);
+}
+
+/* Exception pour les images dans le split */
+.split img {
+  opacity: 1 !important;
+  transition: transform 0.7s ease;
+}
+
+.split img:hover {
+  transform: scale(1.02);
+  opacity: 1 !important;
+}
+
+/* ===============================
+   SPLIT LAYOUT
+================================ */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.split img {
+  width: 100%;
+  margin: 0;
+}
+
+.split.reverse {
+  direction: rtl;
+}
+
+.split.reverse > * {
+  direction: ltr;
+}
+
+/* ===============================
+   CTA - MIEUX CENTRÉ
+================================ */
+.cta {
+  text-align: center;
+  padding: 3.5rem 3rem;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  margin-bottom: 1.25rem;
+  color: var(--primary);
+}
+
+.cta h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta p {
+  font-size: 1.0625rem;
+  margin-bottom: 1.75rem;
+  color: var(--gray-600);
+}
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: var(--white);
+  padding: 1.125rem 3rem;
+  border-radius: 60px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: var(--transition-base);
+  box-shadow: 
+    0 12px 35px rgba(0, 212, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de brillance */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 18px 50px rgba(0, 212, 255, 0.4),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:active {
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 
+    opacity 0.9s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   FOOTER - Premium Technique
+================================ */
+footer {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+  color: var(--gray-300);
+  text-align: center;
+  padding: 4rem 3rem;
+  border-top: 2px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.3;
+}
+
+footer p {
+  margin: 0.75rem 0;
+  color: var(--gray-300);
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 1;
+}
+
+footer strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1200px) {
+  .nav-container {
+    padding: 1rem 2rem;
+  }
+  
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .nav-desktop {
+    display: none;
+  }
+  
+  .burger {
+    display: flex;
+  }
+  
+  .split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .split.reverse {
+    direction: ltr;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .sectors {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .nav-container {
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .logo img {
+    height: 44px;
+  }
+  
+  .hero {
+    min-height: 380px;
+    padding: 0 1rem;
+  }
+  
+  .hero-small {
+    min-height: 380px;
+  }
+  
+  .hero-text {
+    padding: 1.5rem;
+  }
+  
+  .lead {
+    padding-left: 1.25rem;
+  }
+  
+  .card {
+    min-height: 320px;
+  }
+  
+  .card-step {
+    padding: 3.5rem 1.75rem 1.75rem 1.75rem;
+  }
+  
+  .step-number {
+    font-size: 2.5rem;
+    left: 1.75rem;
+  }
+  
+  .offer-card {
+    padding: 1.75rem;
+  }
+  
+  .sectors {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  footer {
+    padding: 3rem 1.5rem;
+  }
+}
