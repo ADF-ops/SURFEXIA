@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  
+  <!-- SEO -->
+  <title>Infiltration CVD de Structures Poreuses - Modélisation & Optimisation | SURFEXIA</title>
+  <meta name="description" content="Développement procédé infiltration CVD pour structures poreuses. Modélisation numérique, optimisation paramètres, contrôle profondeur infiltration. Étude de cas SURFEXIA.">
+  <meta name="keywords" content="infiltration CVD poreuse, modélisation CVD, dépôt structures complexes, optimisation CVD, simulation procédés">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Infiltration CVD Structures Poreuses - Étude de Cas SURFEXIA">
+  <meta property="og:description" content="Développement et modélisation de procédés d'infiltration CVD pour matériaux poreux.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.surfexia.fr/etudes-de-cas/infiltration-cvd-structures-poreuses.html">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    .case-study-content {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+    
+    .case-meta {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: var(--light);
+      border-radius: 12px;
+      font-size: 0.875rem;
+      flex-wrap: wrap;
+    }
+    
+    .case-meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .case-meta-label {
+      color: var(--gray-600);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .case-meta-value {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    .case-section {
+      margin: 3rem 0;
+    }
+    
+    .case-section h2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .challenge-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid #ef4444;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .challenge-box h3 {
+      color: #ef4444;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .solution-box {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid #10b981;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .solution-box h3 {
+      color: #10b981;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .result-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(11, 28, 45, 0.08);
+      text-align: center;
+      border-top: 3px solid var(--accent);
+    }
+    
+    .result-value {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin: 0.5rem 0;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .result-label {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    
+    .methodology-steps {
+      counter-reset: step-counter;
+      list-style: none;
+      margin: 2rem 0;
+    }
+    
+    .methodology-steps li {
+      counter-increment: step-counter;
+      padding-left: 3rem;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    
+    .methodology-steps li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.125rem;
+    }
+    
+    .testimonial {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+      color: var(--white);
+      padding: 2.5rem;
+      border-radius: 16px;
+      margin: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonial::before {
+      content: """;
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.1);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    
+    .testimonial-text {
+      position: relative;
+      z-index: 1;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-author {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .technical-specs {
+      background: var(--light);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    
+    .technical-specs h4 {
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .spec-label {
+      font-weight: 600;
+      color: var(--gray-600);
+      font-size: 0.8125rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .spec-value {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.0625rem;
+    }
+    
+    .info-box {
+      background: rgba(0, 212, 255, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .info-box h4 {
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/logo.webp" alt="SURFEXIA - Ingénierie des surfaces">
+      </a>
+    </div>
+    
+    <nav class="nav-desktop">
+      <a href="../index.html">Accueil</a>
+      <a href="../offres.html">Offres</a>
+      <a href="../methodologie.html">Méthodologie</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <nav class="nav-mobile" id="navMobile">
+    <a href="../index.html">Accueil</a>
+    <a href="../offres.html">Offres</a>
+    <a href="../methodologie.html">Méthodologie</a>
+    <a href="../a-propos.html">À propos</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero hero-small">
+  <img src="../images/infiltration.webp" 
+       alt="Infiltration contrôlée de structures poreuses par procédés CVD"
+       width="1600"
+       height="700">
+  <div class="hero-text reveal">
+    <h1>Infiltration Contrôlée de Structures Poreuses par CVD</h1>
+    <p>Modélisation Numérique • Optimisation Procédé</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="section reveal">
+  <div class="container">
+    <div class="case-study-content">
+      
+      <!-- META -->
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Secteur</span>
+          <span class="case-meta-value">Industrie Haute Technologie</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Application</span>
+          <span class="case-meta-value">Matériaux poreux fonctionnels</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Procédé</span>
+          <span class="case-meta-value">CVD + Modélisation CFD</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Durée</span>
+          <span class="case-meta-value">15 mois</span>
+        </div>
+      </div>
+
+      <!-- CONTEXTE -->
+      <div class="case-section">
+        <h2>Contexte du projet</h2>
+        <p>
+          Les structures poreuses métalliques et céramiques trouvent des applications dans 
+          de nombreux domaines : filtration haute température, catalyse, échangeurs thermiques, 
+          implants biomédicaux, ou encore composants pour piles à combustible. L'infiltration 
+          contrôlée de ces structures par dépôt CVD permet de modifier leurs propriétés 
+          fonctionnelles (conductivité, résistance chimique, biocompatibilité) tout en 
+          préservant leur architecture poreuse.
+        </p>
+        <p>
+          Cependant, le contrôle de la profondeur d'infiltration et de l'uniformité du 
+          dépôt dans des réseaux poreux complexes (porosité ouverte interconnectée, 
+          diamètres de pores 1-100 µm) constitue un défi majeur. Les phénomènes de 
+          transport réactif couplés (diffusion gazeuse, réaction chimique, dépôt solide) 
+          nécessitent une approche combinant expérimentation et modélisation numérique.
+        </p>
+      </div>
+
+      <!-- PROBLÉMATIQUE -->
+      <div class="challenge-box">
+        <h3>🎯 Problématique Client</h3>
+        <ul>
+          <li><strong>Infiltration non uniforme :</strong> Dépôt préférentiel en surface, fermeture prématurée des pores</li>
+          <li><strong>Gradient d'épaisseur :</strong> Revêtement épais (>5 µm) en surface, quasi-nul au cœur</li>
+          <li><strong>Colmatage :</strong> Obstruction progressive des pores réduisant la perméabilité de 70%</li>
+          <li><strong>Reproductibilité faible :</strong> Dispersion lot à lot (Cpk < 1.0)</li>
+          <li><strong>Manque de prédictivité :</strong> Approche empirique nécessitant de nombreux essais</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h4>📐 Enjeu Scientifique</h4>
+        <p>
+          L'infiltration CVD est gouvernée par le <strong>nombre de Thiele modifié</strong> 
+          (φ²), qui compare la vitesse de réaction chimique à la vitesse de diffusion gazeuse 
+          dans les pores. Un φ² élevé favorise le dépôt en surface (infiltration superficielle), 
+          tandis qu'un φ² faible permet une infiltration profonde. L'objectif est d'optimiser 
+          les paramètres procédé pour atteindre le profil d'infiltration cible.
+        </p>
+      </div>
+
+      <!-- MÉTHODOLOGIE -->
+      <div class="case-section">
+        <h2>Méthodologie d'intervention</h2>
+        <ul class="methodology-steps">
+          <li>
+            <strong>Caractérisation de la structure poreuse</strong>
+            <p>Tomographie X pour reconstruction 3D de l'architecture, mesure de porosité 
+            par pycnométrie hélium, distribution taille de pores par porosimétrie mercure, 
+            perméabilité gazeuse. Données d'entrée pour la modélisation.</p>
+          </li>
+          <li>
+            <strong>Développement du modèle numérique</strong>
+            <p>Simulation CFD multiphysique (COMSOL) couplant transport d'espèces chimiques, 
+            réaction de surface et croissance du dépôt. Modèle poreux équivalent (Darcy-Forchheimer) 
+            pour réduire le coût calcul. Validation sur géométries simplifiées.</p>
+          </li>
+          <li>
+            <strong>Étude paramétrique numérique</strong>
+            <p>Plans d'expériences virtuels sur température (700-1000°C), pression (1-100 mbar), 
+            concentration précurseur, temps de dépôt. Identification des fenêtres procédé 
+            optimales pour différents profils d'infiltration (superficiel, intermédiaire, profond).</p>
+          </li>
+          <li>
+            <strong>Validation expérimentale</strong>
+            <p>Essais CVD sur mousses métalliques et céramiques selon paramètres prédits 
+            par le modèle. Caractérisation post-dépôt : MEB sur coupes transverses, 
+            cartographie épaisseur vs profondeur, mesure perméabilité résiduelle.</p>
+          </li>
+          <li>
+            <strong>Raffinement itératif modèle-expérience</strong>
+            <p>Ajustement des constantes cinétiques et coefficients de diffusion effective 
+            sur base des résultats expérimentaux. Convergence modèle → expérience en 3 itérations.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SOLUTION -->
+      <div class="solution-box">
+        <h3>✓ Solution Technique Mise en Œuvre</h3>
+        <p><strong>Stratégie d'infiltration contrôlée multi-étapes :</strong></p>
+        <ol>
+          <li><strong>Phase 1 - Infiltration profonde (φ² faible) :</strong> Basse température 
+          (750°C), pression élevée (50 mbar), concentration précurseur réduite → Dépôt uniforme 
+          dans tout le volume (1-2 µm)</li>
+          <li><strong>Phase 2 - Densification intermédiaire (φ² modéré) :</strong> Température 
+          intermédiaire (850°C), pression 20 mbar → Épaississement progressif (2-4 µm)</li>
+          <li><strong>Phase 3 - Finition de surface (φ² élevé, optionnel) :</strong> Haute 
+          température (950°C), basse pression (5 mbar) → Couche dense externe (1 µm)</li>
+        </ol>
+        <p style="margin-top: 1rem;">
+          <strong>Innovations clés :</strong> Modèle prédictif permettant de calculer le 
+          profil d'infiltration avant fabrication, stratégie multi-régimes pour découpler 
+          infiltration et densification, réduction du temps de développement de 70% vs approche 
+          empirique, élargissement de la fenêtre procédé robuste (±10% paramètres).
+        </p>
+      </div>
+
+      <!-- RÉSULTATS -->
+      <div class="case-section">
+        <h2>Résultats Obtenus</h2>
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-label">Profondeur infiltration</div>
+            <div class="result-value">95%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              Du volume poreux<br>Objectif : >90%
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Uniformité épaisseur</div>
+            <div class="result-value">±15%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              Surface ↔ Cœur<br>Objectif : ±20%
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Perméabilité</div>
+            <div class="result-value">-25%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              vs initial<br>Objectif : <-50%
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Prédictivité modèle</div>
+            <div class="result-value"><10%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              Écart simulation/réel<br>Excellente précision
+            </p>
+          </div>
+        </div>
+
+        <div class="technical-specs">
+          <h4>Spécifications Techniques Validées</h4>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Type substrat</span>
+              <span class="spec-value">Mousse Ni, Al₂O₃</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Porosité initiale</span>
+              <span class="spec-value">75-85%</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Taille pores</span>
+              <span class="spec-value">10-50 µm</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Revêtement</span>
+              <span class="spec-value">SiC, TiN, Pt</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Épaisseur moyenne</span>
+              <span class="spec-value">3-5 µm</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Reproductibilité</span>
+              <span class="spec-value">Cpk > 1.5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÉNÉFICES -->
+      <div class="case-section">
+        <h2>Bénéfices Industriels</h2>
+        <ul>
+          <li><strong>Réduction temps R&D :</strong> -70% vs approche empirique (9 mois → 3 mois)</li>
+          <li><strong>Économie matières :</strong> -40% consommation précurseurs (optimisation cycles)</li>
+          <li><strong>Élargissement gamme produits :</strong> Maîtrise de 3 profils d'infiltration 
+          différents (superficiel / intermédiaire / profond) selon application</li>
+          <li><strong>Outil prédictif transférable :</strong> Modèle adaptable à d'autres 
+          géométries poreuses et précurseurs CVD</li>
+          <li><strong>Valorisation scientifique :</strong> 2 publications, présentation congrès 
+          international CVD</li>
+        </ul>
+      </div>
+
+      <!-- TÉMOIGNAGE -->
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "L'approche couplée modélisation-expérimentation proposée par SURFEXIA a transformé 
+          notre façon de développer des procédés CVD sur structures poreuses. Avant, nous 
+          testions des dizaines de conditions par essai-erreur sans vraiment comprendre les 
+          mécanismes. Maintenant, le modèle nous dit où aller, nous validons expérimentalement, 
+          et en 2-3 itérations c'est optimisé. Le gain de temps et de ressources est considérable, 
+          et surtout nous pouvons prédire le comportement pour de nouvelles applications."
+        </p>
+        <div class="testimonial-author">
+          Responsable Procédés CVD — Industriel Matériaux Avancés
+        </div>
+      </div>
+
+      <!-- PUBLICATIONS -->
+      <div class="case-section">
+        <h2>Valorisation Scientifique</h2>
+        <p>Ce projet a donné lieu à plusieurs communications scientifiques :</p>
+        <ul class="publications">
+          <li>
+            AVRIL, L, <strong>ADDOU, F</strong> et al. (2015) — <em>Vacuum</em>, vol. 122, p. 314-320<br>
+            "Controlled infiltration of metallic foams by CVD: Experimental and numerical approach"
+          </li>
+          <li>
+            Communication orale — <em>European Conference on Chemical Vapor Deposition (EuroCVD-21)</em>, 2017<br>
+            "Multiphysics modeling of CVD infiltration in porous media: From simulation to industrial validation"
+          </li>
+        </ul>
+      </div>
+
+      <!-- TECHNOLOGIES -->
+      <div class="case-section">
+        <h2>Technologies & Outils Mobilisés</h2>
+        <div class="cards">
+          <article class="card offer-card">
+            <h3>Caractérisation Poreuse</h3>
+            <ul>
+              <li>Tomographie X (µCT)</li>
+              <li>Porosimétrie mercure</li>
+              <li>Perméabilité gazeuse</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Modélisation Numérique</h3>
+            <ul>
+              <li>COMSOL Multiphysics (CFD)</li>
+              <li>Transport réactif multi-espèces</li>
+              <li>Cinétique chimique hétérogène</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Validation Expérimentale</h3>
+            <ul>
+              <li>Réacteur CVD basse pression</li>
+              <li>MEB coupes transverses</li>
+              <li>Cartographie épaisseur (FIB)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- APPLICATIONS -->
+      <div class="case-section">
+        <h2>Applications Typiques</h2>
+        <p>Cette méthodologie s'applique à de nombreux domaines :</p>
+        <ul>
+          <li><strong>Catalyse :</strong> Dépôt de métaux nobles (Pt, Pd) sur supports poreux 
+          pour catalyseurs automobile ou production hydrogène</li>
+          <li><strong>Filtration haute température :</strong> Revêtements céramiques (SiC, Al₂O₃) 
+          sur mousses métalliques pour filtres gaz d'échappement diesel</li>
+          <li><strong>Biomédical :</strong> Implants poreux en titane revêtus hydroxyapatite 
+          ou TiN pour ostéointégration</li>
+          <li><strong>Énergie :</strong> Électrodes poreuses de piles à combustible SOFC 
+          (infiltration LSM, YSZ)</li>
+          <li><strong>Thermique :</strong> Échangeurs de chaleur poreux avec revêtement 
+          protecteur haute température</li>
+        </ul>
+      </div>
+
+      <!-- NAVIGATION -->
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--gray-100); display: flex; justify-content: space-between; align-items: center;">
+        <a href="../index.html#cases" style="color: var(--accent); font-weight: 600; text-decoration: none;">
+          ← Retour aux études de cas
+        </a>
+        <a href="../contact.html" class="btn-primary">Discuter de votre projet</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 SURFEXIA — Ingénierie des surfaces</p>
+  <p>Bordeaux • France & Europe • contact@surfexia.fr</p>
+  <p style="margin-top: 1rem;">
+    <a href="../mentions-legales.html" style="color: var(--accent); text-decoration: underline;">
+      Mentions légales & RGPD
+    </a>
+  </p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="../script.js"></script>
+
+</body>
+</html>

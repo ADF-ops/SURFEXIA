@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  
+  <!-- SEO -->
+  <title>Diagnostic Décollement RevÃªtements PVD - Analyse Causes Racines | SURFEXIA</title>
+  <meta name="description" content="Investigation défauts adhérence revÃªtements PVD sur composants métalliques. Plans d'expériences, fenÃªtres procédés robustes. Étude de cas SURFEXIA.">
+  <meta name="keywords" content="décollement PVD, défaillance revÃªtement, diagnostic adhérence, analyse causes racines, préparation surface PVD, optimisation procédé">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Diagnostic Décollement PVD - Étude de Cas SURFEXIA">
+  <meta property="og:description" content="Analyse de défaillances d'adhérence PVD et optimisation procédé industriel.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.surfexia.fr/etudes-de-cas/diagnostic-decollement-pvd.html">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    .case-study-content {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+    
+    .case-meta {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: var(--light);
+      border-radius: 12px;
+      font-size: 0.875rem;
+      flex-wrap: wrap;
+    }
+    
+    .case-meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .case-meta-label {
+      color: var(--gray-600);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .case-meta-value {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    .case-section {
+      margin: 3rem 0;
+    }
+    
+    .case-section h2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .challenge-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid #ef4444;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .challenge-box h3 {
+      color: #ef4444;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .solution-box {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid #10b981;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .solution-box h3 {
+      color: #10b981;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .result-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(11, 28, 45, 0.08);
+      text-align: center;
+      border-top: 3px solid var(--accent);
+    }
+    
+    .result-value {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin: 0.5rem 0;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .result-label {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    
+    .methodology-steps {
+      counter-reset: step-counter;
+      list-style: none;
+      margin: 2rem 0;
+    }
+    
+    .methodology-steps li {
+      counter-increment: step-counter;
+      padding-left: 3rem;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    
+    .methodology-steps li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.125rem;
+    }
+    
+    .testimonial {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+      color: var(--white);
+      padding: 2.5rem;
+      border-radius: 16px;
+      margin: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonial::before {
+      content: """;
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.1);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    
+    .testimonial-text {
+      position: relative;
+      z-index: 1;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-author {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .technical-specs {
+      background: var(--light);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    
+    .technical-specs h4 {
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .spec-label {
+      font-weight: 600;
+      color: var(--gray-600);
+      font-size: 0.8125rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .spec-value {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.0625rem;
+    }
+    
+    .info-box {
+      background: rgba(0, 212, 255, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .info-box h4 {
+      color: var(--accent);
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/logo.webp" alt="SURFEXIA - Ingénierie des surfaces">
+      </a>
+    </div>
+    
+    <nav class="nav-desktop">
+      <a href="../index.html">Accueil</a>
+      <a href="../offres.html">Offres</a>
+      <a href="../methodologie.html">Méthodologie</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <nav class="nav-mobile" id="navMobile">
+    <a href="../index.html">Accueil</a>
+    <a href="../offres.html">Offres</a>
+    <a href="../methodologie.html">Méthodologie</a>
+    <a href="../a-propos.html">À propos</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero hero-small">
+  <img src="../images/case-pvd.webp" 
+       alt="Diagnostic décollement revÃªtements PVD - Analyse de défaillances"
+       width="1600"
+       height="700">
+  <div class="hero-text reveal">
+    <h1>Décollement de RevÃªtements PVD<br>Analyse de Causes Racines</h1>
+    <p>Diagnostic Industriel â€¢ Optimisation Procédé</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="section reveal">
+  <div class="container">
+    <div class="case-study-content">
+      
+      <!-- META -->
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Secteur</span>
+          <span class="case-meta-value">Composants Fonctionnels</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Application</span>
+          <span class="case-meta-value">RevÃªtements PVD multi-filières</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Type mission</span>
+          <span class="case-meta-value">Diagnostic & Optimisation</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Durée</span>
+          <span class="case-meta-value">12 mois</span>
+        </div>
+      </div>
+
+      <!-- CONTEXTE -->
+      <div class="case-section">
+        <h2>Contexte du projet</h2>
+        <p>
+          Un industriel produisant des composants mécaniques de précision pour l'aéronautique 
+          et l'automobile constate un taux de rejet important (8-12%) lié à des défauts 
+          d'adhérence de revÃªtements PVD TiN/TiAlN appliqués pour résistance à l'usure 
+          et réduction du frottement.
+        </p>
+        <p>
+          Les pièces proviennent de trois filières de production distinctes : usinage 
+          traditionnel, fonderie puis usinage, et MIM (Metal Injection Molding). Malgré 
+          un protocole de préparation de surface théoriquement identique, les taux de 
+          défaillance varient fortement selon l'origine des piÃ¨ces.
+        </p>
+        <p>
+          Les décollements surviennent soit immédiatement après dépôt (lors des tests 
+          d'adhérence), soit en service après quelques dizaines d'heures d'utilisation. 
+          Cette non-reproductibilité génère des surcoÃ»ts importants (retouches, rebuts, 
+          réclamations clients) et compromet la qualification de nouveaux composants.
+        </p>
+      </div>
+
+      <!-- PROBLÉMATIQUE -->
+      <div class="challenge-box">
+        <h3>🎯 Problématique Client</h3>
+        <ul>
+          <li><strong>Taux de défaillance inacceptable :</strong> 8-12% de rebuts pour adhérence insuffisante</li>
+          <li><strong>Variabilité selon filières :</strong> MIM (15% défauts) >> Usinage (5% défauts) >> Fonderie (10% défauts)</li>
+          <li><strong>Non-reproductibilité :</strong> MÃªmes paramètres PVD, résultats différents</li>
+          <li><strong>Décollements différés :</strong> Certaines défaillances apparaissent seulement en service</li>
+          <li><strong>Impact économique :</strong> 250 k€/an de pertes + risque qualité client</li>
+          <li><strong>Blocage développement :</strong> Impossibilité de qualifier de nouveaux matériaux sans comprendre les causes</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h4>🔍 Enjeu Diagnostic</h4>
+        <p>
+          L'analyse doit identifier les causes racines des défaillances d'adhérence en distinguant 
+          les facteurs liés au substrat (état métallurgique, contamination, rugosité), à la 
+          préparation de surface (nettoyage, activation), et au procédé PVD lui-mÃªme 
+          (température, polarisation, couche d'accroche). La compréhension fine des mécanismes 
+          permettra de définir des fenÃªtres procédés robustes par filière.
+        </p>
+      </div>
+
+      <!-- MÉTHODOLOGIE -->
+      <div class="case-section">
+        <h2>Méthodologie d'intervention</h2>
+        <ul class="methodology-steps">
+          <li>
+            <strong>Audit initial & collecte données historiques</strong>
+            <p>Analyse des données de production (6 mois) : taux de rejet par lot, filière, 
+            matériau, opérateur. Identification de corrélations statistiques. Audit terrain 
+            des procédés de préparation de surface et PVD.</p>
+          </li>
+          <li>
+            <strong>Caractérisation approfondie des substrats</strong>
+            <p>Comparaison métallurgique des 3 filières (MEB, dureté, contraintes résiduelles, 
+            phases en présence). Cartographie de rugosité, analyse XPS de la chimie de surface, 
+            mesure d'angle de contact pour Ã©valuer la contaminabilité.</p>
+          </li>
+          <li>
+            <strong>Analyse de l'interface revÃªtement/substrat</strong>
+            <p>Coupes FIB sur échantillons conformes vs défaillants. Cartographie EDX pour 
+            identifier contaminations, discontinuités, ou absence de couche d'accroche. 
+            Mesure d'adhérence par scratch test et pull-off test quantitatifs.</p>
+          </li>
+          <li>
+            <strong>Plans d'expériences multi-factoriels</strong>
+            <p>DoE sur paramètres critiques : temps de nettoyage, puissance plasma d'activation, 
+            température substrat, épaisseur couche d'accroche Ti, polarisation, pour chaque 
+            filière. 45 essais au total avec réplicats.</p>
+          </li>
+          <li>
+            <strong>Validation industrielle & qualification</strong>
+            <p>Mise en Å"uvre des gammes optimisées sur lots de production. Suivi statistique 
+            des performances (SPC). Validation par essais de vieillissement accéléré et 
+            retours terrain sur 6 mois.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SOLUTION -->
+      <div class="solution-box">
+        <h3>âœ" Causes Racines Identifiées & Solutions</h3>
+        
+        <p><strong>Filière MIM (15% défauts) :</strong></p>
+        <ul>
+          <li><strong>Cause :</strong> Contamination résiduelle (agents de démoulage, liants organiques) 
+          + porosité résiduelle (frittage incomplet) créant des sites de faiblesse</li>
+          <li><strong>Solution :</strong> Nettoyage renforcé (bain ultrasons chaud + dégraissage alcalin) 
+          + plasma O₂ d'activation prolongé (2×temps standard) + couche Ti épaissie (150 nm → 300 nm)</li>
+        </ul>
+
+        <p><strong>Filière Fonderie (10% défauts) :</strong></p>
+        <ul>
+          <li><strong>Cause :</strong> Hétérogénéité métallurgique (ségrégations, inclusions d'oxydes) 
+          + rugosité excessive créant des concentrations de contraintes</li>
+          <li><strong>Solution :</strong> Tribofinition calibrée pour homogénéiser la rugosité 
+          (Ra 0.3 Âµm ± 0.05) + température PVD légèrement augmentée (+30°C) pour favoriser 
+          la diffusion interfaciale</li>
+        </ul>
+
+        <p><strong>Filière Usinage (5% défauts, référence) :</strong></p>
+        <ul>
+          <li><strong>Observation :</strong> Substrat homogÃ¨ne, faible contamination, rugosité maÃ®trisée 
+          → FenÃªtre procédé initiale déjà  adaptée</li>
+          <li><strong>Optimisation :</strong> Réduction légère du temps plasma (économie) tout en 
+          maintenant les performances</li>
+        </ul>
+
+        <p style="margin-top: 1.5rem;"><strong>Paramètres PVD optimisés communs :</strong></p>
+        <ul>
+          <li>Température substrat : 420°C ± 10°C (MIM/Fonderie), 400°C ± 10°C (Usinage)</li>
+          <li>Polarisation bias : -80V (vs -60V initial) pour améliorer la densité du TiN</li>
+          <li>Rampe thermique : montée contrôlée à 2°C/min pour limiter les contraintes</li>
+          <li>Couche d'accroche Ti : épaisseur adaptée par filière (150-300 nm)</li>
+        </ul>
+      </div>
+
+      <!-- RÉSULTATS -->
+      <div class="case-section">
+        <h2>Résultats Obtenus</h2>
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-label">Taux de rejet global</div>
+            <div class="result-value">1.5%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              vs 10% initial<br>Objectif : <3%
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Filière MIM</div>
+            <div class="result-value">2.5%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              vs 15% initial<br>Amélioration 83%
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Reproductibilité</div>
+            <div class="result-value">Cpk 1.8</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              vs 0.9 initial<br>Procédé maÃ®trisé
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Adhérence moyenne</div>
+            <div class="result-value">+60%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              Scratch test (Lc2)<br>Marge de sécurité
+            </p>
+          </div>
+        </div>
+
+        <div class="technical-specs">
+          <h4>Performances Validées</h4>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Adhérence (pull-off)</span>
+              <span class="spec-value">>65 MPa</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Uniformité revÃªtement</span>
+              <span class="spec-value">±8% épaisseur</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Dureté TiN</span>
+              <span class="spec-value">2200 HV0.05</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Tenue en fatigue</span>
+              <span class="spec-value">>10⁷ cycles</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Vieillissement 500h</span>
+              <span class="spec-value">0 défaillance</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Qualification client</span>
+              <span class="spec-value">Validée</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÉNÉFICES -->
+      <div class="case-section">
+        <h2>Bénéfices Industriels</h2>
+        <ul>
+          <li><strong>Économies directes :</strong> Réduction rebuts/retouches → 220 k€/an</li>
+          <li><strong>Productivité :</strong> Moins d'arrÃªts ligne pour tri/retraitement → +8% capacité</li>
+          <li><strong>Qualité client :</strong> 0 réclamation depuis mise en place (vs 3-5/trimestre avant)</li>
+          <li><strong>Déblocage innovation :</strong> Qualification de 2 nouveaux alliages MIM réussie</li>
+          <li><strong>Capitalisation connaissance :</strong> Gammes opératoires documentées par filière, 
+          formation des opérateurs, SPC en place</li>
+          <li><strong>Flexibilité :</strong> Possibilité de traiter des lots mixtes (multi-filières) 
+          avec fenÃªtres procédés sécurisées</li>
+        </ul>
+      </div>
+
+      <!-- TÉMOIGNAGE -->
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "Nous étions dans une impasse : les défaillances d'adhérence bloquaient notre développement 
+          de nouveaux produits et impactaient notre rentabilité. L'approche SURFEXIA a été 
+          remarquablement méthodique : caractérisation fine des substrats, analyse d'interface 
+          poussée, plans d'expériences rigoureux. Le résultat dépasse nos espérances : non seulement 
+          le taux de rejet a chuté de 85%, mais nous avons désormais une maÃ®trise complète de nos 
+          procédés avec des fenÃªtres robustes par filière. La documentation produite est devenue 
+          notre référence interne."
+        </p>
+        <div class="testimonial-author">
+          Responsable Ingénierie Procédés â€" Équipementier Aéronautique
+        </div>
+      </div>
+
+      <!-- FACTEURS CLÉS -->
+      <div class="case-section">
+        <h2>Facteurs Clés de Succès</h2>
+        <div class="cards">
+          <article class="card offer-card">
+            <h3>Approche Multi-Échelles</h3>
+            <ul>
+              <li>Données production (statistiques)</li>
+              <li>Métallurgie substrats (MEB, DRX)</li>
+              <li>Interface atomique (FIB, XPS)</li>
+              <li>Performances fonctionnelles (essais)</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Méthodologie Structurée</h3>
+            <ul>
+              <li>Hypothèses basées sur observations</li>
+              <li>Plans d'expériences pour validation</li>
+              <li>Optimisation paramètres par filière</li>
+              <li>Validation industrielle progressive</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Transfert Compétences</h3>
+            <ul>
+              <li>Documentation gammes opératoires</li>
+              <li>Formation équipes production</li>
+              <li>Mise en place SPC adhérence</li>
+              <li>Procédures diagnostic défaillances</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- TECHNOLOGIES -->
+      <div class="case-section">
+        <h2>Technologies & Équipements Mobilisés</h2>
+        <div class="cards">
+          <article class="card offer-card">
+            <h3>Caractérisation Substrats</h3>
+            <ul>
+              <li>MEB-EDX, profilométrie 3D</li>
+              <li>XPS (chimie de surface)</li>
+              <li>DRX (contraintes résiduelles)</li>
+              <li>Angle de contact (mouillabilité)</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Analyse Interface</h3>
+            <ul>
+              <li>Coupes FIB haute résolution</li>
+              <li>Cartographie EDX interfaciale</li>
+              <li>Tomographie électronique (TEM)</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Tests Adhérence</h3>
+            <ul>
+              <li>Scratch test (Lc1, Lc2, Lc3)</li>
+              <li>Pull-off test (ISO 4624)</li>
+              <li>Bend test (ASTM C1624)</li>
+              <li>Fatigue cyclique (Daimler-Benz)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- LEÇONS -->
+      <div class="case-section">
+        <h2>Leçons Apprises</h2>
+        <p><strong>1. Importance de l'origine du substrat :</strong></p>
+        <p>
+          MÃªme matériau nominal (ex: 316L), mais état métallurgique et contamination 
+          radicalement différents selon la filière de production. Une gamme unique ne peut 
+          pas convenir à toutes les origines.
+        </p>
+
+        <p><strong>2. Contamination invisible mais critique :</strong></p>
+        <p>
+          Les analyses XPS ont révélé des contaminations organiques (quelques nanomÃ¨tres) 
+          invisibles au MEB mais bloquant totalement l'adhérence. D'où l'importance du 
+          plasma d'activation systématique.
+        </p>
+
+        <p><strong>3. Couche d'accroche = clé de voÃ»te :</strong></p>
+        <p>
+          L'épaisseur de la couche Ti doit Ãªtre adaptée à la qualité du substrat : substrat 
+          dégradé → Ti épais pour "tamponner" les défauts. Substrat propre → Ti fin suffit.
+        </p>
+
+        <p><strong>4. Validation statistique indispensable :</strong></p>
+        <p>
+          Les plans d'expériences ont permis d'identifier des interactions paramètres 
+          non intuitives (ex: température × polarisation). Une approche OFAT (one factor 
+          at a time) aurait échoué.
+        </p>
+      </div>
+
+      <!-- NAVIGATION -->
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--gray-100); display: flex; justify-content: space-between; align-items: center;">
+        <a href="../index.html#cases" style="color: var(--accent); font-weight: 600; text-decoration: none;">
+          â† Retour aux études

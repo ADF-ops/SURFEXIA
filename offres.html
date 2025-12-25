@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   
   <!-- SEO -->
-  <title>Offres & Services | SURFEXIA – Ingénierie des surfaces</title>
-  <meta name="description" content="Offres SURFEXIA : ingénierie des surfaces, revêtements CVD/PVD, diagnostic industriel et optimisation de procédés critiques pour aéronautique, luxe et industries exigeantes.">
-  <meta name="keywords" content="ingénierie surfaces, CVD, PVD, diagnostic industriel, revêtements fonctionnels, traitement surface, Bordeaux">
+  <title>Offres & Services | SURFEXIA Bordeaux — CVD, PVD, Diagnostic industriel</title>
+  <meta name="description" content="Services SURFEXIA Bordeaux : ingénierie des surfaces, revêtements CVD/PVD, diagnostic industriel, préparation de surface, modélisation procédés pour aéronautique, luxe, nucléaire.">
+  <meta name="keywords" content="ingénierie surfaces Bordeaux, CVD Nouvelle-Aquitaine, PVD, diagnostic industriel, revêtements fonctionnels, traitement surface, électropolissage, tribofinition">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Offres & Services | SURFEXIA">
-  <meta property="og:description" content="Solutions techniques à forte valeur ajoutée pour industries critiques : CVD/PVD, diagnostic industriel, caractérisation.">
+  <meta property="og:title" content="Offres & Services | SURFEXIA Bordeaux">
+  <meta property="og:description" content="Solutions techniques à forte valeur ajoutée pour industries critiques : CVD/PVD, diagnostic industriel, caractérisation. Cabinet basé à Bordeaux.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.surfexia.fr/offres.html">
   <meta property="og:image" content="https://www.surfexia.fr/images/og-image.jpeg">
@@ -24,6 +26,72 @@
   
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Schema.org Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Ingénierie des surfaces et procédés critiques",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "SURFEXIA",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bordeaux",
+        "addressRegion": "Nouvelle-Aquitaine",
+        "addressCountry": "FR"
+      },
+      "areaServed": ["FR", "EU"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services d'ingénierie des surfaces",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Ingénierie des surfaces & préparation",
+            "description": "Définition, optimisation et sécurisation des procédés de préparation de surface avant finition ou revêtement"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Revêtements CVD & PVD",
+            "description": "Conception, mise au point et qualification de revêtements pour environnements sévères et applications critiques"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Modélisation numérique & simulation",
+            "description": "Analyse et optimisation de procédés industriels par modélisation multiphysique"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Diagnostic industriel & défaillances",
+            "description": "Analyse des causes racines de défaillances liées aux surfaces, aux procédés ou aux revêtements"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Caractérisation & essais",
+            "description": "Appui technique à la caractérisation physico-chimique et fonctionnelle des surfaces et revêtements"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -32,14 +100,16 @@
 <header class="site-header">
   <div class="nav-container">
     <div class="logo">
-      <img src="images/logo.png" alt="SURFEXIA - Ingénierie des surfaces">
+      <img src="images/logo.png" alt="SURFEXIA - Ingénierie des surfaces Bordeaux">
     </div>
 
     <nav class="nav-desktop">
       <a href="index.html">Accueil</a>
       <a href="offres.html" class="active">Offres</a>
       <a href="methodologie.html">Méthodologie</a>
-      <a href="#contact">Contact</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
     <div class="burger" id="burger">
@@ -53,7 +123,9 @@
     <a href="index.html">Accueil</a>
     <a href="offres.html">Offres</a>
     <a href="methodologie.html">Méthodologie</a>
-    <a href="#contact">Contact</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
@@ -61,8 +133,8 @@
 
 <!-- HERO OFFRES -->
 <section class="hero hero-small">
-  <img src="images/landing-luxe-aero.jpeg"
-       alt="Ingénierie des surfaces pour industries exigeantes : aéronautique, luxe, nucléaire"
+  <img src="images/landing-luxe-aero.webp"
+       alt="Ingénierie des surfaces pour industries exigeantes : aéronautique, luxe, nucléaire - SURFEXIA Bordeaux"
        width="1600" 
        height="700">
 
@@ -125,7 +197,7 @@
         <ul>
           <li>Simulation thermique et étude des flux gazeux (fluidique)</li>
           <li>Modélisation de procédés CVD, PVD et traitements thermiques</li>
-          <li>Analyse de l’influence des paramètres opératoires</li>
+          <li>Analyse de l'influence des paramètres opératoires</li>
           <li>Aide à la conception et à la sécurisation des procédés</li>
         </ul>
       </article>
@@ -149,14 +221,15 @@
       <article class="card offer-card">
         <h3>Caractérisation & essais</h3>
         <p>
-          Appui technique à la caractérisation physico-chimique
-          et fonctionnelle des surfaces et revêtements.
+          Définition des stratégies de caractérisation physico-chimique 
+          et fonctionnelle, en partenariat avec des laboratoires qualifiés 
+          ou sur vos moyens internes.
         </p>
         <ul>
-          <li>MEB, DRX, XRF (en partenariat)</li>
-          <li>Mesure d'épaisseur & composition</li>
+          <li>Sélection des techniques adaptées (MEB, DRX, XRF)</li>
+          <li>Définition des protocoles d'essais</li>
           <li>Essais d'adhérence (scratch, peeling)</li>
-          <li>Rugosité & topographie de surface</li>
+          <li>Interprétation et recommandations techniques</li>
         </ul>
       </article>
 
@@ -180,11 +253,11 @@
 </section>
 
 <!-- CTA -->
-<section class="section reveal" id="contact">
+<section class="section reveal">
   <div class="container cta">
     <h2>Un besoin technique spécifique ?</h2>
     <p>Chaque mission SURFEXIA est construite sur mesure.</p>
-    <a href="mailto:contact@surfexia.fr" class="btn-primary">Discutons de votre projet</a>
+    <a href="contact.html" class="btn-primary">Discutons de votre projet</a>
   </div>
 </section>
 
@@ -192,8 +265,13 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 SURFEXIA – Ingénierie des surfaces</p>
+  <p>© 2025 SURFEXIA — Ingénierie des surfaces</p>
   <p>Bordeaux • France & Europe • contact@surfexia.fr</p>
+  <p style="margin-top: 1rem;">
+    <a href="mentions-legales.html" style="color: var(--accent); text-decoration: underline;">
+      Mentions légales & RGPD
+    </a>
+  </p>
 </footer>
 
 <!-- JAVASCRIPT -->

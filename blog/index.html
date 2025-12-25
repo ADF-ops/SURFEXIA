@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO -->
+  <title>Blog Technique | SURFEXIA — Expertise CVD, PVD, Traitement de Surface</title>
+  <meta name="description" content="Blog technique SURFEXIA : guides, conseils d'experts et analyses approfondies sur les procédés CVD/PVD, traitements de surface et diagnostic industriel.">
+  <meta name="keywords" content="blog ingénierie surfaces, CVD PVD guide, traitement surface conseils, revêtements techniques, diagnostic industriel">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog Technique | SURFEXIA">
+  <meta property="og:description" content="Expertise technique en ingénierie des surfaces : guides, analyses et conseils d'expert.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.surfexia.fr/blog/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    
+    .blog-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(11, 28, 45, 0.08);
+      transition: var(--transition-slow);
+      border: 1px solid rgba(0, 212, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(11, 28, 45, 0.15);
+      border-color: var(--accent);
+    }
+    
+    .blog-card-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    
+    .blog-card:hover .blog-card-image {
+      transform: scale(1.05);
+    }
+    
+    .blog-card-content {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .blog-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+    }
+    
+    .blog-category {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: var(--white);
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .blog-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+      line-height: 1.3;
+    }
+    
+    .blog-card p {
+      color: var(--gray-600);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    
+    .blog-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      text-decoration: none;
+      transition: var(--transition-base);
+    }
+    
+    .blog-read-more:hover {
+      gap: 0.75rem;
+      color: var(--accent-dark);
+    }
+    
+    .blog-read-more::after {
+      content: "→";
+      font-size: 1.25rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/logo.webp" alt="SURFEXIA - Ingénierie des surfaces">
+      </a>
+    </div>
+    
+    <nav class="nav-desktop">
+      <a href="../index.html">Accueil</a>
+      <a href="../offres.html">Offres</a>
+      <a href="../methodologie.html">Méthodologie</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="index.html" class="active">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <nav class="nav-mobile" id="navMobile">
+    <a href="../index.html">Accueil</a>
+    <a href="../offres.html">Offres</a>
+    <a href="../methodologie.html">Méthodologie</a>
+    <a href="../a-propos.html">À propos</a>
+    <a href="index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero hero-small">
+  <img src="../images/landing-diagnostic-industrial.webp" 
+       alt="Blog technique SURFEXIA - Expertise en ingénierie des surfaces"
+       width="1600"
+       height="700">
+  <div class="hero-text reveal">
+    <h1>Blog Technique</h1>
+    <p>Expertise • Guides • Analyses approfondies</p>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="section reveal">
+  <div class="container">
+    <p class="lead">
+      Retrouvez nos analyses techniques, guides pratiques et retours d'expérience 
+      sur l'ingénierie des surfaces, les procédés CVD/PVD et le diagnostic industriel.
+    </p>
+    
+    <div class="blog-grid">
+      
+      <!-- Article 1 : CVD vs PVD -->
+      <article class="blog-card">
+        <img src="../images/case-cvd-crc-nuclear.webp" 
+             alt="Comparaison CVD vs PVD"
+             class="blog-card-image"
+             loading="lazy">
+        <div class="blog-card-content">
+          <div class="blog-meta">
+            <span class="blog-category">Procédés</span>
+            <span>📅 Janvier 2025</span>
+            <span>⏱️ 8 min</span>
+          </div>
+          <h3>CVD vs PVD : Quel procédé choisir pour votre application ?</h3>
+          <p>
+            Guide comparatif complet pour sélectionner le procédé de dépôt adapté 
+            à vos contraintes industrielles : températures, substrats, performances attendues.
+          </p>
+          <a href="cvd-vs-pvd.html" class="blog-read-more">Lire l'article</a>
+        </div>
+      </article>
+
+      <!-- Article 2 : Décollement -->
+      <article class="blog-card">
+        <img src="../images/case-pvd.webp" 
+             alt="Décollement de revêtements métalliques"
+             class="blog-card-image"
+             loading="lazy">
+        <div class="blog-card-content">
+          <div class="blog-meta">
+            <span class="blog-category">Diagnostic</span>
+            <span>📅 Janvier 2025</span>
+            <span>⏱️ 10 min</span>
+          </div>
+          <h3>5 causes courantes de décollement de revêtements métalliques</h3>
+          <p>
+            Analyse des défaillances d'adhérence les plus fréquentes : contamination, 
+            préparation inadaptée, contraintes thermiques. Solutions et prévention.
+          </p>
+          <a href="decollement-revetements.html" class="blog-read-more">Lire l'article</a>
+        </div>
+      </article>
+
+      <!-- Article 3 : Électropolissage -->
+      <article class="blog-card">
+        <img src="../images/case-surface-finishing-316l.webp" 
+             alt="Électropolissage vs polissage mécanique"
+             class="blog-card-image"
+             loading="lazy">
+        <div class="blog-card-content">
+          <div class="blog-meta">
+            <span class="blog-category">Préparation</span>
+            <span>📅 Janvier 2025</span>
+            <span>⏱️ 7 min</span>
+          </div>
+          <h3>Électropolissage vs Polissage Mécanique : Guide de Sélection</h3>
+          <p>
+            Comparaison technique des procédés de finition de surface : avantages, 
+            limites, coûts et critères de choix selon vos exigences fonctionnelles.
+          </p>
+          <a href="electropolissage-guide.html" class="blog-read-more">Lire l'article</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section dark reveal">
+  <div class="container cta">
+    <h2>Une question technique spécifique ?</h2>
+    <p>Nos experts sont à votre disposition pour analyser votre problématique</p>
+    <a href="../contact.html" class="btn-primary">Nous contacter</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 SURFEXIA — Ingénierie des surfaces</p>
+  <p>Bordeaux • France & Europe • contact@surfexia.fr</p>
+  <p style="margin-top: 1rem;">
+    <a href="../mentions-legales.html" style="color: var(--accent); text-decoration: underline;">
+      Mentions légales & RGPD
+    </a>
+  </p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="../script.js"></script>
+
+</body>
+</html>

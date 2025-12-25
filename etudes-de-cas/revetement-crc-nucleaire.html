@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  
+  <!-- SEO -->
+  <title>Revêtements CVD CrC pour Applications Nucléaires | SURFEXIA</title>
+  <meta name="description" content="Développement revêtement carbure de chrome CVD pour environnements nucléaires sévères. Tenue haute température 1200°C, résistance corrosion. Étude de cas SURFEXIA.">
+  <meta name="keywords" content="revêtement CrC nucléaire, CVD carbure chrome, haute température nucléaire, protection corrosion, industrie nucléaire">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Revêtements CVD CrC Nucléaire - Étude de Cas SURFEXIA">
+  <meta property="og:description" content="Développement CVD CrC pour composants nucléaires haute température.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.surfexia.fr/etudes-de-cas/revetement-crc-nucleaire.html">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    .case-study-content {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+    
+    .case-meta {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: var(--light);
+      border-radius: 12px;
+      font-size: 0.875rem;
+      flex-wrap: wrap;
+    }
+    
+    .case-meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .case-meta-label {
+      color: var(--gray-600);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .case-meta-value {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    .case-section {
+      margin: 3rem 0;
+    }
+    
+    .case-section h2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .challenge-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid #ef4444;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .challenge-box h3 {
+      color: #ef4444;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .solution-box {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid #10b981;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .solution-box h3 {
+      color: #10b981;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .result-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(11, 28, 45, 0.08);
+      text-align: center;
+      border-top: 3px solid var(--accent);
+    }
+    
+    .result-value {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin: 0.5rem 0;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .result-label {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    
+    .methodology-steps {
+      counter-reset: step-counter;
+      list-style: none;
+      margin: 2rem 0;
+    }
+    
+    .methodology-steps li {
+      counter-increment: step-counter;
+      padding-left: 3rem;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    
+    .methodology-steps li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.125rem;
+    }
+    
+    .testimonial {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+      color: var(--white);
+      padding: 2.5rem;
+      border-radius: 16px;
+      margin: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonial::before {
+      content: """;
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.1);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    
+    .testimonial-text {
+      position: relative;
+      z-index: 1;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-author {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .technical-specs {
+      background: var(--light);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    
+    .technical-specs h4 {
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .spec-label {
+      font-weight: 600;
+      color: var(--gray-600);
+      font-size: 0.8125rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .spec-value {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.0625rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/logo.webp" alt="SURFEXIA - Ingénierie des surfaces">
+      </a>
+    </div>
+    
+    <nav class="nav-desktop">
+      <a href="../index.html">Accueil</a>
+      <a href="../offres.html">Offres</a>
+      <a href="../methodologie.html">Méthodologie</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <nav class="nav-mobile" id="navMobile">
+    <a href="../index.html">Accueil</a>
+    <a href="../offres.html">Offres</a>
+    <a href="../methodologie.html">Méthodologie</a>
+    <a href="../a-propos.html">À propos</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero hero-small">
+  <img src="../images/case-cvd-crc-nuclear.webp" 
+       alt="Revêtement CVD CrC pour applications nucléaires"
+       width="1600"
+       height="700">
+  <div class="hero-text reveal">
+    <h1>Revêtements CVD CrC pour Applications Nucléaires</h1>
+    <p>Industrie Nucléaire • Tenue Haute Température</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="section reveal">
+  <div class="container">
+    <div class="case-study-content">
+      
+      <!-- META -->
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Secteur</span>
+          <span class="case-meta-value">Nucléaire & Énergie</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Application</span>
+          <span class="case-meta-value">Composants haute température</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Procédé</span>
+          <span class="case-meta-value">CVD Carbure de Chrome</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Durée</span>
+          <span class="case-meta-value">24 mois</span>
+        </div>
+      </div>
+
+      <!-- CONTEXTE -->
+      <div class="case-section">
+        <h2>Contexte du projet</h2>
+        <p>
+          L'industrie nucléaire impose des contraintes extrêmes aux matériaux : températures 
+          supérieures à 1000°C, environnements oxydants et corrosifs, irradiation neutronique, 
+          et exigences de sûreté absolues. Les gaines de combustible et composants de 
+          réacteurs de nouvelle génération nécessitent des revêtements protecteurs capables 
+          de résister à ces conditions pendant plusieurs années.
+        </p>
+        <p>
+          Le carbure de chrome (CrC) est identifié comme matériau prometteur pour sa 
+          résistance à l'oxydation haute température, sa stabilité chimique et sa compatibilité 
+          avec les alliages base zirconium. Cependant, son dépôt par CVD sur substrats 
+          métalliques complexes (tubes de faible diamètre, géométries 3D) présente des 
+          défis techniques majeurs.
+        </p>
+      </div>
+
+      <!-- PROBLÉMATIQUE -->
+      <div class="challenge-box">
+        <h3>🎯 Problématique Client</h3>
+        <ul>
+          <li><strong>Uniformité critique :</strong> Tubes de 10 mm diamètre × 4 m longueur nécessitant ±5% d'épaisseur</li>
+          <li><strong>Adhérence haute température :</strong> Délamination lors de cyclages thermiques 20°C ↔ 1200°C</li>
+          <li><strong>Porosité résiduelle :</strong> Pénétration d'oxygène compromettant la protection</li>
+          <li><strong>Diffusion substrat/revêtement :</strong> Formation de phases fragiles à l'interface</li>
+          <li><strong>Qualification nucléaire :</strong> Exigences normatives RCC-M strictes</li>
+        </ul>
+      </div>
+
+      <!-- MÉTHODOLOGIE -->
+      <div class="case-section">
+        <h2>Méthodologie d'intervention</h2>
+        <ul class="methodology-steps">
+          <li>
+            <strong>Étude bibliographique et thermodynamique</strong>
+            <p>Analyse des systèmes Cr-C, identification des précurseurs CVD optimaux 
+            (Cr(CO)₆, CₓHᵧ), modélisation des équilibres chimiques et cinétiques de croissance.</p>
+          </li>
+          <li>
+            <strong>Développement du procédé CVD</strong>
+            <p>Conception d'un réacteur CVD vertical tubulaire permettant un dépôt uniforme 
+            sur grandes longueurs. Optimisation température (900-1050°C), pression (10-100 mbar), 
+            débits précurseurs, atmosphère réactive (H₂/Ar).</p>
+          </li>
+          <li>
+            <strong>Caractérisation multi-échelles</strong>
+            <p>MEB-FIB pour microstructure et porosité, DRX pour phases cristallines, 
+            cartographie épaisseur par courants de Foucault, nanoindentation pour propriétés 
+            mécaniques, tests d'oxydation isothermes et cycliques.</p>
+          </li>
+          <li>
+            <strong>Modélisation numérique du procédé</strong>
+            <p>Simulation CFD des flux gazeux dans le réacteur, couplage thermique-fluidique 
+            pour prédire l'uniformité du dépôt, optimisation de la géométrie du réacteur.</p>
+          </li>
+          <li>
+            <strong>Validation en conditions représentatives</strong>
+            <p>Essais d'oxydation sous vapeur d'eau (1200°C, 1000h), cyclage thermique 
+            accéléré (500 cycles), caractérisation post-mortem des échantillons vieillis.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SOLUTION -->
+      <div class="solution-box">
+        <h3>✓ Solution Technique Mise en Œuvre</h3>
+        <p><strong>Procédé CVD multi-couches optimisé :</strong></p>
+        <ol>
+          <li><strong>Couche d'accroche Cr métallique (1 µm) :</strong> Déposée par CVD à 
+          850°C pour améliorer l'adhérence et créer une transition ductile</li>
+          <li><strong>CrC dense (15-20 µm) :</strong> Déposé à 1000°C sous atmosphère 
+          H₂/C₂H₂/Ar contrôlée, avec montée en température programmée pour limiter les contraintes</li>
+          <li><strong>Post-traitement thermique (1100°C, 4h, vide) :</strong> Densification, 
+          relaxation des contraintes, homogénéisation de la composition</li>
+        </ol>
+        <p style="margin-top: 1rem;">
+          <strong>Innovations clés :</strong> Réacteur CVD à injection multipoints pour uniformité 
+          sur 4 mètres, contrôle précis du ratio C/Cr pour éviter le graphite libre, gradient 
+          thermique maîtrisé (±5°C sur toute la longueur), monitoring in-situ par pyrométrie IR.
+        </p>
+      </div>
+
+      <!-- RÉSULTATS -->
+      <div class="case-section">
+        <h2>Résultats Obtenus</h2>
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-label">Tenue oxydation</div>
+            <div class="result-value">>1200°C</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              1000h sous vapeur<br>Objectif : 1000h min
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Uniformité</div>
+            <div class="result-value">±4%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              Sur 4 mètres<br>Objectif : ±5%
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Porosité</div>
+            <div class="result-value"><0.5%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              Revêtement dense<br>Objectif : <1%
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Adhérence</div>
+            <div class="result-value">Excellente</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              500 cycles thermiques<br>Aucun décollement
+            </p>
+          </div>
+        </div>
+
+        <div class="technical-specs">
+          <h4>Spécifications Techniques Validées</h4>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Épaisseur CrC</span>
+              <span class="spec-value">18 ± 0.7 µm</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Phase cristalline</span>
+              <span class="spec-value">Cr₃C₂ + Cr₇C₃</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Dureté</span>
+              <span class="spec-value">1400 HV</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Prise de masse O₂</span>
+              <span class="spec-value"><0.5 mg/cm²</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Température service</span>
+              <span class="spec-value">≤1200°C</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Reproductibilité</span>
+              <span class="spec-value">Cpk > 1.5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÉNÉFICES -->
+      <div class="case-section">
+        <h2>Bénéfices Industriels</h2>
+        <ul>
+          <li><strong>Durée de vie accrue :</strong> +300% vs gaines non revêtues en conditions accidentelles</li>
+          <li><strong>Sûreté améliorée :</strong> Barrière de diffusion hydrogène, limitation relâchement fission</li>
+          <li><strong>Qualification réglementaire :</strong> Dossier technique validé par autorité de sûreté</li>
+          <li><strong>Industrialisation sécurisée :</strong> Procédé transféré sur ligne pilote, 
+          capacité 1000 tubes/an</li>
+          <li><strong>Valorisation R&D :</strong> 3 publications scientifiques, 1 brevet déposé</li>
+        </ul>
+      </div>
+
+      <!-- TÉMOIGNAGE -->
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "La maîtrise des procédés CVD haute température par SURFEXIA a été décisive pour 
+          notre programme de développement de combustibles avancés. Leur capacité à 
+          modéliser le comportement du réacteur, optimiser les paramètres critiques et 
+          caractériser finement les revêtements nous a permis de valider la solution en 
+          2 ans au lieu des 4 ans initialement prévus. La rigueur scientifique et la 
+          compréhension des enjeux nucléaires ont été remarquables."
+        </p>
+        <div class="testimonial-author">
+          Chef de Projet Matériaux — Centre de Recherche Nucléaire
+        </div>
+      </div>
+
+      <!-- PUBLICATIONS -->
+      <div class="case-section">
+        <h2>Valorisation Scientifique</h2>
+        <p>Ce projet a donné lieu à plusieurs publications et communications :</p>
+        <ul class="publications">
+          <li>
+            MICHAU, A, <strong>ADDOU, F</strong> et al. (2019) — <em>Surface and Coating Technologies</em>, 
+            vol. 375, p. 894-902<br>
+            "Chromium carbide growth by direct liquid injection CVD for enhanced accident tolerant 
+            fuel claddings"
+          </li>
+          <li>
+            <strong>ADDOU, F</strong> et al. (2021) — <em>Coatings</em>, vol. 11 (n° 1), p. 50<br>
+            "High temperature oxidation behavior of CVD CrC coatings in steam environment"
+          </li>
+        </ul>
+      </div>
+
+      <!-- TECHNOLOGIES -->
+      <div class="case-section">
+        <h2>Technologies & Équipements Mobilisés</h2>
+        <div class="cards">
+          <article class="card offer-card">
+            <h3>Dépôt CVD</h3>
+            <ul>
+              <li>Réacteur CVD vertical tubulaire</li>
+              <li>Précurseurs Cr(CO)₆, C₂H₂</li>
+              <li>Contrôle température multi-zones</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Modélisation</h3>
+            <ul>
+              <li>CFD (COMSOL Multiphysics)</li>
+              <li>Thermodynamique (FactSage)</li>
+              <li>Cinétique chimique</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Caractérisation</h3>
+            <ul>
+              <li>MEB-FIB, DRX, XPS</li>
+              <li>Essais oxydation thermobalance</li>
+              <li>Nanoindentation, profilométrie</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- NAVIGATION -->
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--gray-100); display: flex; justify-content: space-between; align-items: center;">
+        <a href="../index.html#cases" style="color: var(--accent); font-weight: 600; text-decoration: none;">
+          ← Retour aux études de cas
+        </a>
+        <a href="../contact.html" class="btn-primary">Discuter de votre projet</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 SURFEXIA — Ingénierie des surfaces</p>
+  <p>Bordeaux • France & Europe • contact@surfexia.fr</p>
+  <p style="margin-top: 1rem;">
+    <a href="../mentions-legales.html" style="color: var(--accent); text-decoration: underline;">
+      Mentions légales & RGPD
+    </a>
+  </p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="../script.js"></script>
+
+</body>
+</html>

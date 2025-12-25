@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  
+  <!-- SEO -->
+  <title>Métallisation CVD Cuivre sur Composites CFRP - Aéronautique | SURFEXIA</title>
+  <meta name="description" content="Développement procédé CVD cuivre sur CFRP pour guides d'onde aéronautiques. Optimisation adhérence, conductivité électrique, validation RF. Étude de cas SURFEXIA.">
+  <meta name="keywords" content="métallisation CVD composites, CVD cuivre CFRP, guide onde composite, adhérence polymère cuivre, aéronautique spatial">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Métallisation CVD Cuivre CFRP - Étude de Cas SURFEXIA">
+  <meta property="og:description" content="Développement CVD cuivre sur composites pour applications aéronautiques critiques.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.surfexia.fr/etudes-de-cas/metallisation-cvd-cuivre-cfrp.html">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <style>
+    .case-study-content {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+    
+    .case-meta {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: var(--light);
+      border-radius: 12px;
+      font-size: 0.875rem;
+      flex-wrap: wrap;
+    }
+    
+    .case-meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .case-meta-label {
+      color: var(--gray-600);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .case-meta-value {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    .case-section {
+      margin: 3rem 0;
+    }
+    
+    .case-section h2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .challenge-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid #ef4444;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .challenge-box h3 {
+      color: #ef4444;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .solution-box {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid #10b981;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+    
+    .solution-box h3 {
+      color: #10b981;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .result-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(11, 28, 45, 0.08);
+      text-align: center;
+      border-top: 3px solid var(--accent);
+    }
+    
+    .result-value {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--primary);
+      margin: 0.5rem 0;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .result-label {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    
+    .methodology-steps {
+      counter-reset: step-counter;
+      list-style: none;
+      margin: 2rem 0;
+    }
+    
+    .methodology-steps li {
+      counter-increment: step-counter;
+      padding-left: 3rem;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    
+    .methodology-steps li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.125rem;
+    }
+    
+    .testimonial {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+      color: var(--white);
+      padding: 2.5rem;
+      border-radius: 16px;
+      margin: 3rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonial::before {
+      content: """;
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.1);
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    
+    .testimonial-text {
+      position: relative;
+      z-index: 1;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    
+    .testimonial-author {
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    
+    .technical-specs {
+      background: var(--light);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    
+    .technical-specs h4 {
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .spec-label {
+      font-weight: 600;
+      color: var(--gray-600);
+      font-size: 0.8125rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .spec-value {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.0625rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../images/logo.webp" alt="SURFEXIA - Ingénierie des surfaces">
+      </a>
+    </div>
+    
+    <nav class="nav-desktop">
+      <a href="../index.html">Accueil</a>
+      <a href="../offres.html">Offres</a>
+      <a href="../methodologie.html">Méthodologie</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <nav class="nav-mobile" id="navMobile">
+    <a href="../index.html">Accueil</a>
+    <a href="../offres.html">Offres</a>
+    <a href="../methodologie.html">Méthodologie</a>
+    <a href="../a-propos.html">À propos</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero hero-small">
+  <img src="../images/case-cvd-copper-cfrp.webp" 
+       alt="Métallisation CVD cuivre sur composite CFRP - Aéronautique"
+       width="1600"
+       height="700">
+  <div class="hero-text reveal">
+    <h1>Métallisation CVD Cuivre sur Composites CFRP</h1>
+    <p>Aéronautique & Spatial • Guides d'onde RF</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="section reveal">
+  <div class="container">
+    <div class="case-study-content">
+      
+      <!-- META -->
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Secteur</span>
+          <span class="case-meta-value">Aéronautique & Spatial</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Application</span>
+          <span class="case-meta-value">Guides d'onde RF</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Procédé</span>
+          <span class="case-meta-value">CVD Cuivre</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Durée</span>
+          <span class="case-meta-value">18 mois</span>
+        </div>
+      </div>
+
+      <!-- CONTEXTE -->
+      <div class="case-section">
+        <h2>Contexte du projet</h2>
+        <p>
+          Dans le secteur aéronautique et spatial, les guides d'onde sont des composants critiques 
+          pour la transmission de signaux radiofréquences. Le remplacement des guides métalliques 
+          traditionnels par des structures composites CFRP (Carbon Fiber Reinforced Polymer) offre 
+          un gain de masse significatif, essentiel pour les applications embarquées.
+        </p>
+        <p>
+          Cependant, les composites étant non conducteurs, ils nécessitent une métallisation de 
+          surface pour assurer la conductivité électrique requise. Le cuivre est le matériau de 
+          choix pour ses excellentes propriétés électriques, mais son dépôt sur polymère composite 
+          présente des défis majeurs d'adhérence et d'uniformité.
+        </p>
+      </div>
+
+      <!-- PROBLÉMATIQUE -->
+      <div class="challenge-box">
+        <h3>🎯 Problématique Client</h3>
+        <ul>
+          <li><strong>Adhérence insuffisante :</strong> Décollement du cuivre lors des tests mécaniques (vibrations, chocs thermiques)</li>
+          <li><strong>Non-uniformité :</strong> Épaisseur variable sur surfaces 3D complexes</li>
+          <li><strong>Contamination de surface :</strong> Présence de release agents issus du moulage composite</li>
+          <li><strong>Performances RF :</strong> Pertes de signal supérieures aux spécifications</li>
+          <li><strong>Industrialisation :</strong> Procédé non reproductible en production</li>
+        </ul>
+      </div>
+
+      <!-- MÉTHODOLOGIE -->
+      <div class="case-section">
+        <h2>Méthodologie d'intervention</h2>
+        <ul class="methodology-steps">
+          <li>
+            <strong>Audit du procédé existant</strong>
+            <p>Analyse complète de la chaîne de valeur : préparation CFRP, nettoyage, activation, 
+            dépôt CVD, post-traitement. Identification des points critiques par caractérisation 
+            MEB-EDX des interfaces.</p>
+          </li>
+          <li>
+            <strong>Optimisation de la préparation de surface</strong>
+            <p>Développement d'un protocole de nettoyage en trois étapes (dégraissage alcalin, 
+            rinçages, activation plasma O₂/N₂) pour éliminer les contaminants et créer des sites 
+            de nucléation.</p>
+          </li>
+          <li>
+            <strong>Qualification des paramètres CVD</strong>
+            <p>Plans d'expériences sur température (350-450°C), pression (1-10 mbar), débit de 
+            précurseur et temps de dépôt. Suivi par caractérisation adhérence (scratch test), 
+            épaisseur (XRF), et conductivité.</p>
+          </li>
+          <li>
+            <strong>Caractérisation multi-échelles</strong>
+            <p>MEB pour morphologie et uniformité, DRX pour structure cristalline, XPS pour 
+            composition chimique interfaciale, tests d'adhérence normalisés (ASTM D3359).</p>
+          </li>
+          <li>
+            <strong>Validation RF et environnementale</strong>
+            <p>Mesures de pertes d'insertion en bande X, essais de vieillissement accéléré 
+            (cyclage thermique -55°C / +125°C, vibrations), qualification fatigue.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SOLUTION -->
+      <div class="solution-box">
+        <h3>✓ Solution Technique Mise en Œuvre</h3>
+        <p><strong>Procédé CVD optimisé en trois couches :</strong></p>
+        <ol>
+          <li><strong>Couche d'accroche Ti/TiN (50 nm) :</strong> Déposée par PVD pour assurer 
+          la liaison chimique avec le CFRP activé</li>
+          <li><strong>Dépôt CVD cuivre (8-12 µm) :</strong> À 420°C sous atmosphère H₂/N₂ réductrice, 
+          avec contrôle précis du débit de Cu(hfac)₂</li>
+          <li><strong>Post-traitement recuit (300°C, 2h) :</strong> Relaxation des contraintes 
+          et densification du film</li>
+        </ol>
+        <p style="margin-top: 1rem;">
+          <strong>Innovations clés :</strong> Activation plasma biphasée (O₂ puis N₂) pour créer 
+          des groupements fonctionnels, gradient thermique maîtrisé pour éviter la délamination, 
+          monitoring en temps réel de l'épaisseur par réflectométrie.
+        </p>
+      </div>
+
+      <!-- RÉSULTATS -->
+      <div class="case-section">
+        <h2>Résultats Obtenus</h2>
+        <div class="results-grid">
+          <div class="result-card">
+            <div class="result-label">Adhérence</div>
+            <div class="result-value">>40 MPa</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              Pull-off test<br>Objectif : >30 MPa
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Uniformité</div>
+            <div class="result-value">±5%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              Variation d'épaisseur<br>Objectif : ±10%
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Conductivité</div>
+            <div class="result-value">95%</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              vs Cu massif<br>Objectif : >90%
+            </p>
+          </div>
+          <div class="result-card">
+            <div class="result-label">Pertes RF</div>
+            <div class="result-value">-0.8 dB/m</div>
+            <p style="font-size: 0.8125rem; color: var(--gray-600); margin-top: 0.5rem;">
+              Bande X (10 GHz)<br>Objectif : <1 dB/m
+            </p>
+          </div>
+        </div>
+
+        <div class="technical-specs">
+          <h4>Spécifications Techniques Validées</h4>
+          <div class="specs-grid">
+            <div class="spec-item">
+              <span class="spec-label">Rugosité finale</span>
+              <span class="spec-value">Ra 0.3 µm</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Épaisseur Cu</span>
+              <span class="spec-value">10 ± 1 µm</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Résistance fatigue</span>
+              <span class="spec-value">>10⁶ cycles</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Tenue thermique</span>
+              <span class="spec-value">-55°C / +150°C</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Résistance vibrations</span>
+              <span class="spec-value">20 g, 2000 Hz</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Reproductibilité</span>
+              <span class="spec-value">Cpk > 1.67</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÉNÉFICES -->
+      <div class="case-section">
+        <h2>Bénéfices Industriels</h2>
+        <ul>
+          <li><strong>Gain de masse :</strong> -40% vs guides métalliques (aluminium)</li>
+          <li><strong>Coût réduit :</strong> Économie de 15% sur coût de fabrication global</li>
+          <li><strong>Qualification rapide :</strong> Campagne de tests réduite de 6 mois grâce 
+          à l'optimisation amont</li>
+          <li><strong>Industrialisation sécurisée :</strong> Procédé transféré en production avec 
+          gamme opératoire validée</li>
+          <li><strong>Élargissement gamme :</strong> Procédé applicable à d'autres géométries 
+          (antennes, boîtiers RF)</li>
+        </ul>
+      </div>
+
+      <!-- TÉMOIGNAGE -->
+      <div class="testimonial">
+        <p class="testimonial-text">
+          "L'expertise SURFEXIA a été déterminante pour débloquer notre projet de guides d'onde 
+          composites. Leur approche méthodique, combinant compréhension des mécanismes 
+          physico-chimiques et optimisation paramétrique, nous a permis de passer d'un procédé 
+          instable à une solution industrialisable en moins de 18 mois. La caractérisation 
+          multi-échelles a révélé des phénomènes interfaciaux que nous n'avions pas identifiés."
+        </p>
+        <div class="testimonial-author">
+          Responsable R&D Matériaux — Équipementier Aéronautique
+        </div>
+      </div>
+
+      <!-- PUBLICATIONS -->
+      <div class="case-section">
+        <h2>Valorisation Scientifique</h2>
+        <p>Ce projet a donné lieu à plusieurs publications dans des revues internationales :</p>
+        <ul class="publications">
+          <li>
+            <strong>ADDOU, F</strong> et al. (2016) — <em>Surface and Coating Technologies</em>, 
+            vol. 308, p. 62-69<br>
+            "CVD copper coatings on CFRP for RF applications: Adhesion mechanisms and electrical properties"
+          </li>
+          <li>
+            ZHANG, A, <strong>ADDOU, F</strong> et al. (2017) — <em>Vacuum</em>, vol. 35 (n° 6), p. 061101<br>
+            "Thermal stability of Cu/CFRP interfaces for aerospace waveguides"
+          </li>
+        </ul>
+      </div>
+
+      <!-- TECHNOLOGIES -->
+      <div class="case-section">
+        <h2>Technologies & Équipements Mobilisés</h2>
+        <div class="cards">
+          <article class="card offer-card">
+            <h3>Préparation & Activation</h3>
+            <ul>
+              <li>Dégraissage ultrasonique</li>
+              <li>Plasma O₂/N₂ (13.56 MHz)</li>
+              <li>Contrôle angle de contact</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Dépôt CVD</h3>
+            <ul>
+              <li>Réacteur CVD basse pression</li>
+              <li>Précurseur Cu(hfac)₂</li>
+              <li>Monitoring in-situ (QCM)</li>
+            </ul>
+          </article>
+          <article class="card offer-card">
+            <h3>Caractérisation</h3>
+            <ul>
+              <li>MEB-EDX, DRX, XPS</li>
+              <li>Scratch test, Pull-off</li>
+              <li>Mesures RF (VNA)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <!-- NAVIGATION -->
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--gray-100); display: flex; justify-content: space-between; align-items: center;">
+        <a href="../index.html#cases" style="color: var(--accent); font-weight: 600; text-decoration: none;">
+          ← Retour aux études de cas
+        </a>
+        <a href="../contact.html" class="btn-primary">Discuter de votre projet</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 SURFEXIA — Ingénierie des surfaces</p>
+  <p>Bordeaux • France & Europe • contact@surfexia.fr</p>
+  <p style="margin-top: 1rem;">
+    <a href="../mentions-legales.html" style="color: var(--accent); text-decoration: underline;">
+      Mentions légales & RGPD
+    </a>
+  </p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="../script.js"></script>
+
+</body>
+</html>
