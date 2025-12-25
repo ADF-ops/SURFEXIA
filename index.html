@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   
   <!-- SEO -->
-  <title>SURFEXIA | Ingénierie des surfaces – Bordeaux</title>
-  <meta name="description" content="SURFEXIA : cabinet d'ingénierie des surfaces à Bordeaux. Expertise en traitements de surface, CVD/PVD, revêtements fonctionnels pour aéronautique, luxe et industries critiques.">
-  <meta name="keywords" content="ingénierie surfaces, traitement surface, CVD, PVD, électropolissage, revêtements, Bordeaux, aéronautique, luxe, diagnostic industriel">
-  <meta name="author" content="SURFEXIA">
+  <title>SURFEXIA | Ingénierie des surfaces Bordeaux — CVD, PVD, Diagnostic industriel</title>
+  <meta name="description" content="Cabinet d'ingénierie des surfaces à Bordeaux. Expert CVD/PVD, diagnostic industriel, traitements de surface pour aéronautique, luxe, nucléaire. Interventions France & Europe.">
+  <meta name="keywords" content="ingénierie surfaces Bordeaux, traitement surface, CVD, PVD, électropolissage, revêtements, aéronautique, luxe, diagnostic industriel, Nouvelle-Aquitaine">
+  <meta name="author" content="SURFEXIA - Fouzi Addou">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="SURFEXIA | Ingénierie des surfaces – Bordeaux">
-  <meta property="og:description" content="Cabinet indépendant spécialisé en traitements de surface et procédés critiques.">
+  <meta property="og:title" content="SURFEXIA | Ingénierie des surfaces Bordeaux — CVD, PVD, Diagnostic">
+  <meta property="og:description" content="Cabinet indépendant spécialisé en traitements de surface et procédés critiques. Bordeaux, France & Europe.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.surfexia.fr">
   <meta property="og:image" content="https://www.surfexia.fr/images/og-image.jpeg">
@@ -22,6 +24,8 @@
   <!-- SEO Local -->
   <meta name="geo.region" content="FR-33">
   <meta name="geo.placename" content="Bordeaux">
+  <meta name="geo.position" content="44.837789;-0.57918">
+  <meta name="ICBM" content="44.837789, -0.57918">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,23 +35,67 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   
-  <!-- Schema.org -->
+  <!-- Schema.org LocalBusiness + Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "SURFEXIA",
-    "description": "Cabinet d'ingénierie des surfaces et procédés critiques",
+    "description": "Cabinet d'ingénierie des surfaces et procédés critiques basé à Bordeaux",
     "url": "https://www.surfexia.fr",
+    "telephone": "+33745467572",
+    "email": "contact@surfexia.fr",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bordeaux",
       "addressRegion": "Nouvelle-Aquitaine",
+      "postalCode": "33000",
       "addressCountry": "FR"
     },
-    "email": "contact@surfexia.fr",
-    "areaServed": ["FR", "EU"],
-    "serviceType": ["Traitement de surface", "CVD", "PVD", "Diagnostic industriel"]
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "44.837789",
+      "longitude": "-0.57918"
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "France"
+      },
+      {
+        "@type": "Place",
+        "name": "Europe"
+      }
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Fouzi Addou",
+      "jobTitle": "Ingénieur R&D Matériaux - Docteur en Sciences et Génie des Matériaux",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "INPT Toulouse - CIRIMAT"
+        }
+      ]
+    },
+    "serviceType": [
+      "Traitement de surface",
+      "Revêtements CVD",
+      "Revêtements PVD",
+      "Diagnostic industriel",
+      "Modélisation de procédés",
+      "Caractérisation matériaux",
+      "Préparation de surface"
+    ],
+    "knowsAbout": [
+      "Ingénierie des surfaces",
+      "CVD (Chemical Vapor Deposition)",
+      "PVD (Physical Vapor Deposition)",
+      "Électropolissage",
+      "Tribofinition",
+      "Adhérence des revêtements",
+      "Analyse de défaillances"
+    ]
   }
   </script>
 </head>
@@ -58,14 +106,16 @@
 <header class="site-header">
   <div class="nav-container">
     <div class="logo">
-      <img src="images/logo.png" alt="SURFEXIA - Ingénierie des surfaces">
+      <img src="images/logo.webp" alt="SURFEXIA - Ingénierie des surfaces Bordeaux">
     </div>
     
     <nav class="nav-desktop">
       <a href="index.html" class="active">Accueil</a>
       <a href="offres.html">Offres</a>
       <a href="methodologie.html">Méthodologie</a>
-      <a href="#contact">Contact</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
     
     <div class="burger" id="burger">
@@ -79,7 +129,9 @@
     <a href="index.html">Accueil</a>
     <a href="offres.html">Offres</a>
     <a href="methodologie.html">Méthodologie</a>
-    <a href="#contact">Contact</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="blog/index.html">Blog</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
@@ -87,8 +139,8 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img src="images/hero-surface-engineering.jpeg" 
-       alt="Ingénierie des surfaces et procédés critiques"
+  <img src="images/hero-surface-engineering.webp" 
+       alt="Ingénierie des surfaces et procédés critiques - SURFEXIA Bordeaux"
        width="1920"
        height="1080">
   <div class="hero-text">
@@ -132,105 +184,102 @@
     <div class="cards">
       
       <article class="card">
-        <img src="images/case-cvd-copper-cfrp.jpeg"
-             alt="Métallisation CVD cuivre sur composite CFRP">
+        <img src="images/case-cvd-copper-cfrp.webp"
+             alt="Métallisation CVD cuivre sur composite CFRP - Aéronautique">
         <div class="card-content">
-          <h3>Métallisation CVD cuivre sur composites CFRP – Aéronautique</h3>
+          <h3>Métallisation CVD Cuivre sur Composites CFRP — Aéronautique</h3>
           <p>
             Développement d'un procédé de métallisation CVD cuivre sur matériaux composites CFRP 
-            destinés à des applications de guides d'onde.
+            destinés à des applications de guides d'onde. Optimisation adhérence, conductivité 
+            électrique, validation RF.
           </p>
-          <p>
-            Les travaux ont porté sur la compréhension des mécanismes d'adhérence à l'interface 
-            polymère/cuivre, l'optimisation des paramètres CVD, et la caractérisation complète 
-            des revêtements (adhérence, conductivité électrique, rugosité, essais RF, analyses 
-            MEB/DRX/XRF).
-          </p>
+          <a href="etudes-de-cas/metallisation-cvd-cuivre-cfrp.html" 
+             style="color: var(--accent); font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">
+            Lire l'étude complète →
+          </a>
         </div>
       </article>
       
       <article class="card">
-        <img src="images/case-cvd-crc-nuclear.jpeg"
+        <img src="images/case-cvd-crc-nuclear.webp"
              alt="Revêtement CVD CrC pour applications nucléaires">
         <div class="card-content">
-          <h3>Revêtements CVD CrC pour applications nucléaires</h3>
+          <h3>Revêtements CVD CrC pour Applications Nucléaires</h3>
           <p>
             Développement et qualification de revêtements carbure de chrome (CrC) par voie CVD 
-            pour des composants destinés à des environnements nucléaires sévères.
+            pour des composants destinés à des environnements nucléaires sévères. Tenue haute 
+            température jusqu'à 1200°C.
           </p>
-          <p>
-            Caractérisation microstructurale et chimique, essais d'adhérence et de tenue mécanique, 
-            essais de tenue à haute température jusqu'à 1200°C. Dépôts réalisés à 450°C pour 
-            évaluer la stabilité du système revêtement/substrat en conditions extrêmes.
-          </p>
+          <a href="etudes-de-cas/revetement-crc-nucleaire.html" 
+             style="color: var(--accent); font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">
+            Lire l'étude complète →
+          </a>
         </div>
       </article>
 
       <article class="card">
-        <img src="images/infiltration.jpeg"
+        <img src="images/infiltration.webp"
              alt="Infiltration contrôlée de structures poreuses par procédés CVD">
         <div class="card-content">
-          <h3>Infiltration contrôlée de structures poreuses par procédés CVD</h3>
+          <h3>Infiltration Contrôlée de Structures Poreuses par Procédés CVD</h3>
           <p>
-           Développement et optimisation de procédés d’infiltration de structures poreuses par dépôts
-           chimiques en phase vapeur (CVD) pour l’élaboration de revêtements fonctionnels (carbures, nitrures, alumine).
+            Développement et optimisation de procédés d'infiltration de structures poreuses par dépôts
+            chimiques en phase vapeur (CVD) pour l'élaboration de revêtements fonctionnels.
           </p>
-           <p>
-            Étude des mécanismes d’infiltration, de la cinétique de dépôt et des interfaces substrat/revêtement afin d’assurer
-            une pénétration homogène des pores et la maîtrise des propriétés finales (adhérence, densification, performances mécaniques et fonctionnelles).
-          </p>
+          <a href="etudes-de-cas/infiltration-cvd-structures-poreuses.html" 
+             style="color: var(--accent); font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">
+            Lire l'étude complète →
+          </a>
         </div>
       </article>
       
       <article class="card">
-        <img src="images/case-pvd.jpeg"
-             alt="Défaillance et décollement de revêtement PVD">
+        <img src="images/case-pvd.webp"
+             alt="Défaillance et décollement de revêtement PVD - Diagnostic">
         <div class="card-content">
-          <h3>Décollement de revêtements PVD – Analyse de causes racines</h3>
+          <h3>Décollement de Revêtements PVD — Analyse de Causes Racines</h3>
           <p>
             Investigation de défauts d'adhérence de revêtements PVD sur composants métalliques 
-            issus de différentes filières de préparation de surface.
+            issus de différentes filières de préparation de surface. Plans d'expériences et 
+            fenêtres procédés robustes.
           </p>
-          <p>
-            L'étude a mis en évidence l'influence des procédés de polissage mécanique, 
-            tribofinition et nettoyage. Des études paramétriques ont permis de définir des 
-            fenêtres procédés robustes reliant préparation de surface, rugosité et tenue du revêtement.
-          </p>
+          <a href="etudes-de-cas/diagnostic-decollement-pvd.html" 
+             style="color: var(--accent); font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">
+            Lire l'étude complète →
+          </a>
         </div>
       </article>
 
       <article class="card">
-        <img src="images/case-surface-finishing-316l.jpeg"
+        <img src="images/case-surface-finishing-316l.webp"
              alt="Développement de procédés de préparation de surface sur inox 316L">
         <div class="card-content">
-          <h3>Développement de procédés de préparation de surface – Inox 316L</h3>
+          <h3>Développement de Procédés de Préparation de Surface — Inox 316L</h3>
           <p>
             Définition et mise au point de procédés de préparation de surface adaptés
-            aux exigences fonctionnelles et esthétiques, sur la base d'un cahier des charges
-            client ou d'un rendu visuel attendu.
+            aux exigences fonctionnelles et esthétiques. Sélection technologie et élaboration 
+            gamme opératoire.
           </p>
-          <p>
-            Sélection de la technologie la plus pertinente (polissage mécanique,
-            tribofinition, électropolissage) et élaboration de la gamme opératoire
-            permettant de maîtriser l'évolution de la rugosité et de l'aspect de surface.
-          </p>
+          <a href="etudes-de-cas/preparation-surface-316l.html" 
+             style="color: var(--accent); font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">
+            Lire l'étude complète →
+          </a>
         </div>
       </article>
 
       <article class="card">
-        <img src="images/modelisation.jpeg"
+        <img src="images/modelisation.webp"
              alt="Modélisation numérique et simulation multiphysique de procédés industriels">
         <div class="card-content">
-          <h3>Modélisation numérique et simulation multiphysique de procédés industriels</h3>
+          <h3>Modélisation Numérique et Simulation Multiphysique de Procédés</h3>
           <p>
-            Développement de modèles numériques multiphysiques pour l’analyse et l’optimisation
-            de procédés industriels complexes liés aux surfaces et aux revêtements.
-        </p>
-        <p>
-          Simulation des transferts thermiques, des cinétiques de réaction et des flux gazeux (fluidique)
-          afin d’identifier les zones critiques du procédé, d’anticiper l’influence des paramètres 
-          opératoires et de réduire les phases d’essais expérimentaux.
+            Développement de modèles numériques multiphysiques pour l'analyse et l'optimisation
+            de procédés industriels complexes. Simulation thermique, cinétique, fluidique.
           </p>
+          <a href="etudes-de-cas/modelisation-procedes-industriels.html" 
+             style="color: var(--accent); font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem;">
+            Lire l'étude complète →
+          </a>
         </div>
       </article>
       
@@ -263,9 +312,9 @@
 <section class="section reveal" id="contact">
   <div class="container cta">
     <h2>Un regard expert sur vos surfaces et procédés</h2>
-    <p>Basé à Bordeaux – Interventions France & Europe</p>
+    <p>Basé à Bordeaux — Interventions France & Europe</p>
     <p><strong>contact@surfexia.fr</strong></p>
-    <a href="mailto:contact@surfexia.fr" class="btn-primary">Nous contacter</a>
+    <a href="contact.html" class="btn-primary">Nous contacter</a>
   </div>
 </section>
 
@@ -273,8 +322,13 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 SURFEXIA – Ingénierie des surfaces</p>
+  <p>© 2025 SURFEXIA — Ingénierie des surfaces</p>
   <p>Bordeaux • France & Europe • contact@surfexia.fr</p>
+  <p style="margin-top: 1rem;">
+    <a href="mentions-legales.html" style="color: var(--accent); text-decoration: underline;">
+      Mentions légales & RGPD
+    </a>
+  </p>
 </footer>
 
 <!-- JAVASCRIPT -->
